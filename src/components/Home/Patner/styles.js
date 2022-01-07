@@ -38,7 +38,7 @@ export const PatnerContainer = styled.div`
     margin: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 1vw;
+    margin-top: 4vw;
 }
 .patner_container_conten2 .conten1_img #img{
     margin: 0;
@@ -73,6 +73,9 @@ export const PatnerContainer = styled.div`
     }
     .patner_container_conten2{
         margin-top: 20vw;
+    }
+    .patner_container_conten2 .conten1_img {
+        margin-top: 9vw;
     }
     .patner_container_conten2 .conten1_img #img{
         max-width: 50vw;

@@ -94,7 +94,7 @@ export const ComingContainer = styled.div`
         margin-top: 8vw;
     }
     .commingsoon_cards {
-        padding: 1.5vw;
+        padding: 1.5vw 1.5vw 2.2vw 1.5vw;
         border-radius: 1vw;
     }
     .commingsoon_cards h2 {
@@ -104,7 +104,7 @@ export const ComingContainer = styled.div`
         font-size: 1vw;
     }
     .commingsoon_cards h3{
-        font-size: 1vw;
+        font-size: 1.2vw;
         line-height: 1.8vw;
     }
 }

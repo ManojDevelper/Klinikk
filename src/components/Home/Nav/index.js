@@ -61,17 +61,17 @@ const Nav = () =>
             <div id={ navbar ? 'nav_main_div' : 'nav_main_div2' }>
                 <div id="nav_container">
                     <div id="logo">
-                        <Link to="/">
+                        <Link to="/" id="logo_link">
                             <img src={ logo } alt="image" id="nav_logo" />
                         </Link>
                         <img src={ ham1 } alt="img" id="ham_burger" onClick={ () => setHam( true ) } />
                     </div>
                     <div id="nav_items">
-                        <Link to="/" id="navlinks" activeClassName="nav_active">HOME</Link>
-                        <Link to="/" id="navlinks" activeClassName="nav_active">ABOUT</Link>
-                        <Link to="/#cards_container" id="navlinks" activeClassName="nav_active">PRODUCTS</Link>
-                        <Link to="/" id="navlinks" activeClassName="nav_active">FIND DOCTOR</Link>
-                        <Link to="/" id="navlinks" activeClassName="nav_active">CONTACT US</Link>
+                        <Link to="/" id="navlinks">Home</Link>
+                        <Link to="/" id="navlinks">About</Link>
+                        <Link to="/#cards_container" id="navlinks">Products</Link>
+                        <Link to="/" id="navlinks">Find Doctor</Link>
+                        <Link to="/" id="navlinks">Contact Us</Link>
                         <Link to="/" id="reglink"><button id="navbtn1">Register/Login</button></Link>
                     </div>
                 </div>
@@ -80,11 +80,11 @@ const Nav = () =>
                 ham ?
                     <div id="nav_items_mob">
                         <img src={ close } alt="img" id="ham_burger" onClick={ () => setHam( false ) } />
-                        <Link to="/" id="navlinks" activeClassName="nav_active">HOME</Link>
-                        <Link to="/" id="navlinks" activeClassName="nav_active">ABOUT</Link>
-                        <Link to="/" id="navlinks" activeClassName="nav_active">PRODUCTS</Link>
-                        <Link to="/" id="navlinks" activeClassName="nav_active">FIND DOCTOR</Link>
-                        <Link to="/" id="navlinks" activeClassName="nav_active">CONTACT US</Link>
+                        <Link to="/" id="navlinks">Home</Link>
+                        <Link to="/" id="navlinks">About</Link>
+                        <Link to="/" id="navlinks">Products</Link>
+                        <Link to="/#finddoctors" id="navlinks">Find Doctor</Link>
+                        <Link to="/" id="navlinks">Contact Us</Link>
                         <Link to="/register" id="reglink"><button id="navbtn1">Register/Login</button></Link>
                         <div id="nav_icons">
                             <a href="https://www.facebook.com/NaturalMindsInd/" target="_blank" rel="noopener noreferrer"><img src={ fb } alt="img" /></a>

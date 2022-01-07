@@ -13,6 +13,7 @@ overflow: hidden;
 }
 #banner_section #matter #dots {
     display: flex;
+    margin: 0 0 2vw 0;
 }
 #banner_section #matter #dots #dot {
     width: 8px;
@@ -106,7 +107,7 @@ overflow: hidden;
 }
 #banner_section #matter #dots {
     position: absolute;
-    top: 51vw;
+    top: 56vw;
     left: 30vw;
 }
 #banner_section #matter #dots #dot {
@@ -132,17 +133,16 @@ overflow: hidden;
    width: fit-content;
 }
 #banner_section #button button {
-   width: 27.5vw;
-   height: 8.3vw;
-   padding: 0.642857142857143vw 1.71428571428571vw;
-   border-radius: 1vw;
-   font-size: 2.9vw;
+    width: 33vw;
+    height: 10vw;
+    border-radius: 1.3vw;
+    font-size: 3.5vw;
 }
 #banner_section #button button:nth-child(2) {
-   width: 27.5vw;
-   height: 8.3vw;
-   border-radius: 1vw;
-   font-size: 2.9vw;
+    width: 31vw;
+    height: 10vw;
+    border-radius: 1.3vw;
+    font-size: 3.5vw;
    margin: 0 0 0 4vw;
 }
 #banner_section #button button #icon {

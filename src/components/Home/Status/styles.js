@@ -68,7 +68,7 @@ export const StatusContainer = styled.div`
         padding: 4vw 20px;
     }
     .status_container {
-        width: calc(100% - 8%);
+        width: calc(100% - 15%);
         grid-template-columns: repeat(1, auto);
         grid-template-rows: repeat(4, 20vw);
         gap: 4vw;
@@ -83,7 +83,7 @@ export const StatusContainer = styled.div`
         width: 12vw;
     }
     .card_matter {
-        font-size: 4vw;
+        font-size: 3.6vw;
         line-height: 5vw;
         margin: 0;
         margin-left: 4vw;

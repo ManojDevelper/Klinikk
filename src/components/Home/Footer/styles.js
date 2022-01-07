@@ -86,6 +86,9 @@ export const FooterSection = styled.div`
     text-align: center;
     margin-top: 40px;
 }
+#store:nth-child(3) {
+    margin: 1vw 0 0 0;
+}
 #store p {
     font-style: normal;
     font-weight: 600;
@@ -140,7 +143,7 @@ export const FooterSection = styled.div`
         margin-top: 3vw;
     }
     #store:first-child {
-        margin-top: 0;
+        margin: 0 ;
     }
     #store p {
         font-size: 3.2vw;

@@ -71,7 +71,7 @@ z-index: 5;
 @media (max-width:750px) {
     #nav_container {
         height: fit-content;
-        padding: 26px 28px 16px 28px;
+        padding: 18px;
     }
     #nav_container #logo {
         width: 100%;
@@ -79,6 +79,9 @@ z-index: 5;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    #nav_container #logo #logo_link {
+        display: flex;
     }
     #nav_container #logo #ham_burger {
         display: flex;

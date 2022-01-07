@@ -489,7 +489,7 @@ width: 1.25vw;
   line-height: 5vw;
 }
 #coreteam_h3 {
-  font-size: 3.9vw;
+  font-size: 3.2vw;
   line-height: 4.9vw;
   margin-top: 2.5vw;
 }

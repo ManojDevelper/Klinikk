@@ -94,8 +94,9 @@ export const BlogsContainer = styled.div`
         margin: auto 0 auto 4vw;
     }
     #blog_card_title {
-        font-size: 3.1vw;
-        line-height: 3.9vw;
+        font-size: 3.5vw;
+        line-height: 5vw;
+        font-weight: 600;
     }
     #blog_card_description {
         display: none;
