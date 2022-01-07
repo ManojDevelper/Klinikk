@@ -70,8 +70,8 @@ const Nav = () =>
                         <Link to="/" id="navlinks">Home</Link>
                         <Link to="/" id="navlinks">About</Link>
                         <Link to="/#cards_container" id="navlinks">Products</Link>
-                        <Link to="/" id="navlinks">Find Doctor</Link>
-                        <Link to="/" id="navlinks">Contact Us</Link>
+                        <Link to="/#finddoctors" id="navlinks">Find Doctor</Link>
+                        <Link to="/#contact" id="navlinks">Contact Us</Link>
                         <Link to="/" id="reglink"><button id="navbtn1">Register/Login</button></Link>
                     </div>
                 </div>
@@ -80,12 +80,12 @@ const Nav = () =>
                 ham ?
                     <div id="nav_items_mob">
                         <img src={ close } alt="img" id="ham_burger" onClick={ () => setHam( false ) } />
-                        <Link to="/" id="navlinks">Home</Link>
-                        <Link to="/" id="navlinks">About</Link>
-                        <Link to="/" id="navlinks">Products</Link>
-                        <Link to="/#finddoctors" id="navlinks">Find Doctor</Link>
-                        <Link to="/" id="navlinks">Contact Us</Link>
-                        <Link to="/register" id="reglink"><button id="navbtn1">Register/Login</button></Link>
+                        <Link to="/" id="navlinks" onClick={ () => setHam( false ) }>Home</Link>
+                        <Link to="/" id="navlinks" onClick={ () => setHam( false ) }>About</Link>
+                        <Link to="/#cards_container" id="navlinks" onClick={ () => setHam( false ) }>Products</Link>
+                        <Link to="/#finddoctors" id="navlinks" onClick={ () => setHam( false ) }>Find Doctor</Link>
+                        <Link to="/#contact" id="navlinks" onClick={ () => setHam( false ) }>Contact Us</Link>
+                        <Link to="/" id="reglink"><button id="navbtn1" onClick={ () => setHam( false ) }>Register/Login</button></Link>
                         <div id="nav_icons">
                             <a href="https://www.facebook.com/NaturalMindsInd/" target="_blank" rel="noopener noreferrer"><img src={ fb } alt="img" /></a>
                             <a href="https://www.instagram.com/naturalminds_in/?hl=en" target="_blank" rel="noopener noreferrer"><img src={ insta } alt="img" /></a>
