@@ -95,14 +95,14 @@ overflow: hidden;
 }
 @media (max-width:750px) {
     background: #F4FAFD;
-    height: 182vw;
+    height: 167vw;
     display: flex;
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 #banner_section {
-    margin: 45vw 0 0 0;
+    margin: 28vw 0 0 0;
     position: relative;
 }
 #banner_section #matter #dots {

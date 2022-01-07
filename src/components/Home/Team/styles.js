@@ -295,6 +295,7 @@ margin: auto 0 auto 1.9375vw;
     margin: 0;
     right: 3.3vw;
     width: 4.1vw;
+    top: 29%;
 }
 #coreteam_info {
   border-radius: 2vw;

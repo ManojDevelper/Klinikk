@@ -1,11 +1,11 @@
-import React, {useState} from "react"
+import React, { useEffect, useState } from "react"
 import { BannerSection } from "./styles.js";
 import icon from "../../../data/assets/play_icon.svg";
 import banner from "../../../data/assets/banner.png";
 
 const Banner = () =>
 {
-    const [toggle, setToggle] = useState(1)
+    const [ toggle, setToggle ] = useState( 1 )
 
     const data = [
         {
@@ -33,28 +33,29 @@ const Banner = () =>
     ]
 
 
+
     return (
         <BannerSection >
             <div id="banner_section" >
                 <div id="matter" >
                     <div id="dots">
-                    {data && data.map(datass => 
-                        <div id="dot" className={toggle === (datass.id) ? "active" : "notactive"} onClick={ () => setToggle( datass.id ) }></div>
-                    )}
+                        { data && data.map( datass =>
+                            <div id="dot" className={ toggle === ( datass.id ) ? "active" : "notactive" } onClick={ () => setToggle( datass.id ) }></div>
+                        ) }
                     </div>
-                {data && data.map((datas, i) =>
-                <>
-                {
-                    toggle === (datas.id) ?
-                    <div>
-                    <h1>{datas.title} <span>{datas.tm}</span> {datas.title2}</h1>
-                    <h2>{datas.description} </h2>
-                    </div>
-                    :
-                    ""
-                }
-                    </> 
-                    )}
+                    { data && data.map( ( datas, i ) =>
+                        <>
+                            {
+                                toggle === ( datas.id ) ?
+                                    <div>
+                                        <h1>{ datas.title } <span>{ datas.tm }</span> { datas.title2 }</h1>
+                                        <h2>{ datas.description } </h2>
+                                    </div>
+                                    :
+                                    ""
+                            }
+                        </>
+                    ) }
                 </div >
 
                 <div id="button" >
