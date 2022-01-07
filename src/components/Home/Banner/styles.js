@@ -11,6 +11,29 @@ overflow: hidden;
     height: fit-content;
     margin: auto 0 auto 6.8vw;
 }
+#banner_section #matter #dots {
+    display: flex;
+}
+#banner_section #matter #dots #dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 0 0 20px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+#banner_section #matter #dots #dot:first-child {
+    margin: 0;
+}
+#banner_section #matter #dots .notactive {
+    width: 8px;
+    height: 8px;
+    opacity: 0.3;
+    border: 1px solid #212E34;
+}
+#banner_section #matter #dots .active {
+    border: none;
+    background: #00B3DB;
+}
 #banner_section #matter h1 {
     font-style: normal;
     font-weight: bold;
@@ -64,21 +87,32 @@ overflow: hidden;
     margin: 0 0.5vw 0 0;
 }
 #banner_image {
-    margin: auto 0 -0.6vw 8vw;
+    margin: auto 5vw -0.6vw auto;
 }
 #banner_image img {
     width: 41.4vw;
 }
 @media (max-width:750px) {
     background: #F4FAFD;
-    height: 143.9vw;
+    height: 182vw;
     display: flex;
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 #banner_section {
-    margin: 27vw 0 0 0;
+    margin: 45vw 0 0 0;
+    position: relative;
+}
+#banner_section #matter #dots {
+    position: absolute;
+    top: 51vw;
+    left: 30vw;
+}
+#banner_section #matter #dots #dot {
+    width: 2vw;
+    height: 2vw;
+    margin: 0 0 0 20px;
 }
 #banner_section #matter h1 {
    font-size: 6.2vw;
@@ -120,7 +154,7 @@ overflow: hidden;
     width: 71.9vw;
  }
  #banner_image {
-    margin: auto 0 -2vw 0;
+    margin: auto 0 -3vw 0;
  }
 }
 `

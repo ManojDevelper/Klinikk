@@ -267,7 +267,13 @@ export const CardsContainer = styled.div`
     #highlights #highlights_container {
         grid-template-columns: repeat(2,1fr);
         gap: 4.7vw 3.25vw;
-        margin: 6vw 0 0 0;
+        margin: 9vw 0 0 0;
+    }
+    #highlights #highlights_container #mini_cards {
+        height: 24vw;
+        padding: 3vw 1vw 1vw 3vw;
+        background: rgb(226, 242, 255);
+        border-radius: 1.16vw;
     }
     #highlights #highlights_container #mini_cards img {
         width: 7vw;
@@ -277,12 +283,6 @@ export const CardsContainer = styled.div`
         font-size: 2.5vw;
         line-height: 4vw;
         margin: 1vw 0 0 0;
-    }
-     #highlights #highlights_container #mini_cards {
-        height: 24vw;
-        padding: 1vw;
-        background: #E2F2FF;
-        border-radius: 1.16vw;
     }
 }
 `

@@ -8,20 +8,41 @@ export const FooterSection = styled.div`
 .footer {
     width: 100%;
     background: linear-gradient(135deg, #12c5e7 0%, #0385b1 100%);
-    padding: 54px 90px 40px 90px;
+    padding: 3.85vw 6.4vw 2.85vw 6.4vw;
+}
+#footer_title {
+    display: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.5vw;
+    line-height: 5.7vw;
+    color: #ffffff;
+    margin: 0;
+    cursor: pointer;
+    width: 57vw;
 }
 .footer_container {
     display: grid;
     grid-template-columns: 20vw 1fr 8vw 18vw 1fr;
-    gap: 50px;
+    gap: 3.57vw;
+    margin: 0;
 }
 .footer_b1_title p {
     font-style: normal;
     font-weight: bold;
-    font-size: 21.3442px;
+    font-size: 1.524vw;
     color: #ffffff;
     margin: 0;
     cursor: pointer;
+}
+.footer_b1_title #f_b_t2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.524vw;
+    color: #ffffff;
+    margin: 0;
+    cursor: pointer;
+    display: none;
 }
 .footer_b1_content {
     margin: 0.5vw 0 0 0;
@@ -32,8 +53,8 @@ export const FooterSection = styled.div`
 #footer_content {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 29px;
+    font-size: 1vw;
+    line-height: 2.07vw;
     color: #ffffff;
     margin: 0;
 }
@@ -58,7 +79,7 @@ export const FooterSection = styled.div`
 #footer_footer {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 1vw;
     letter-spacing: 0.06em;
     color: #ffffff;
     margin: 0;
@@ -83,15 +104,33 @@ export const FooterSection = styled.div`
     margin-left: 1.25vw;
 }
 @media (max-width: 650px) {
+    .footer {
+        padding: 8.75vw 5vw;
+    }
+    #footer_title {
+        display: flex;
+    }
     .footer_container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3vw;
+        margin: 9vw 0 0 0;
+    }
+    .footer_container #footer_block1:nth-child(1) {
+        grid-row: 2/3;
+    }
+    .footer_container #footer_block1:nth-child(1) .footer_b1_title p {
+        display: none;
+    }
+    .footer_container #footer_block1:nth-child(1) .footer_b1_title #f_b_t2 {
+        display: flex;
+        font-size: 4vw;
+        line-height: unset;
     }
     .footer_img {
         display: flex;
         flex-direction: column;
-        margin: 0;
+        margin: 8vw 0 0 0 ;
         justify-content: center;
     }
     .footer_img img {
@@ -117,6 +156,7 @@ export const FooterSection = styled.div`
         font-size: 4vw;
         line-height: unset;
     }
+    
     #footer_content {
         font-size: 2.9vw;
         line-height: 5vw;

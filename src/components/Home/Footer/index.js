@@ -57,11 +57,13 @@ const Footer = () => {
     return (
         <FooterSection>
             <div className="footer">
+              <h1 id="footer_title">Klinik Everywhere Technologies Pvt Ltd</h1>
                 <div className="footer_container">
                     { data.footer.childMarkdownRemark.frontmatter.footer.map( footer =>
                         <div id="footer_block1" key={ footer.id }>
                             <div className="footer_b1_title">
                                 <p id="f_b_t">{ footer.title }</p>
+                                <p id="f_b_t2">address</p>
                             </div>
                             <div className="footer_b1_content">
                                 <a href={ footer.link1 }><p id="footer_content">{ footer.list1 }</p></a>

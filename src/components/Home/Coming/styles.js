@@ -122,8 +122,8 @@ export const ComingContainer = styled.div`
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: repeat(3, 80vw);
-        gap: 64px;
-        margin-top: 83px;
+        gap: 13.3vw;
+        margin-top: 17.2vw;
     }
     #cs_img {
         width: 15vw;
@@ -139,6 +139,7 @@ export const ComingContainer = styled.div`
         font-style: normal;
         font-weight: 600;
         font-size: 5vw;
+        line-height: inherit;
     }
     .commingsoon_cards p {
         font-style: normal;

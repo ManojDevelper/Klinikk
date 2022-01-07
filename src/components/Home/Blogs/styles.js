@@ -87,10 +87,11 @@ export const BlogsContainer = styled.div`
     }
     .blog_card_img img {
         width: 20vw;
-        height: 20vw;
+        height: 18vw;
     }
     .blog_card_matter {
-        width:fit-content;
+        width: fit-content;
+        margin: auto 0 auto 4vw;
     }
     #blog_card_title {
         font-size: 3.1vw;
