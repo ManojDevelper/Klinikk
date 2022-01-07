@@ -86,7 +86,7 @@ export const BlogsContainer = styled.div`
        margin: 12vw 0 0 0;
     }
     .blog_card_img img {
-        width: 20vw;
+        width: 24vw;
         height: 18vw;
     }
     .blog_card_matter {

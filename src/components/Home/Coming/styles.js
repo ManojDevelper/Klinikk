@@ -31,7 +31,7 @@ export const ComingContainer = styled.div`
     background-color: white;
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
     border-radius: 8px;
-    padding: 25px;
+    padding: 25px 25px 40px 25px;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 5.8vw auto;

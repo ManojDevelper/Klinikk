@@ -284,7 +284,7 @@ export const CardsContainer = styled.div`
         height: 7vw;
     }
     #highlights #highlights_container #mini_cards p {
-        font-size: 3vw;
+        font-size: 3.1vw;
         line-height: 4.5vw;
         margin: 1vw 0 0 0;
     }
