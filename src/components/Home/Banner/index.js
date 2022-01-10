@@ -5,7 +5,7 @@ import banner from "../../../data/assets/banner.png";
 import { CloseOutlined } from '@ant-design/icons';
 import { Carousel, Modal } from 'antd';
 import App from "../Popup/app";
-import Video from "../Popup/Video";
+import Video from "../Popup/video";
 
 const Banner = () =>
 {
