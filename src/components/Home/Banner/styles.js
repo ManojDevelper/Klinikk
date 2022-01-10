@@ -11,35 +11,66 @@ overflow: hidden;
     height: fit-content;
     margin: auto 0 auto 6.8vw;
 }
-#banner_section #matter #dots {
+#banner_section #matter {
+    width: 46vw;
+}
+.ant-carousel .slick-track {
     display: flex;
-    margin: 0 0 2vw 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
-#banner_section #matter #dots #dot {
-    width: 8px;
-    height: 8px;
-    margin: 0 0 0 20px;
+.ant-carousel .slick-dots-bottom{
+    bottom: 13vw;
+    margin: 0;
+    width: fit-content;
+    z-index: 0;
+}
+.ant-carousel .slick-dots li.slick-active {
+    width: 5px;
+    height: 5px;
     transform: rotate(45deg);
-    cursor: pointer;
+    background: #00B3DB;
+    border: 1px solid #00B3DB;
+    position: relative;
 }
-#banner_section #matter #dots #dot:first-child {
+.ant-carousel .slick-dots li.slick-active button{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    margin: 0;
+    position: absolute;
+}
+.ant-carousel .slick-dots li {
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    border: 1px solid #212E34;
+    position: relative;
+    margin: 0 0 0 13px;
+}
+.ant-carousel .slick-dots li:first-child {
     margin: 0;
 }
-#banner_section #matter #dots .notactive {
-    width: 8px;
-    height: 8px;
-    opacity: 0.3;
-    border: 1px solid #212E34;
-}
-#banner_section #matter #dots .active {
+.ant-carousel .slick-dots li button {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
     border: none;
-    background: #00B3DB;
+    margin: 0;
+    position: absolute;
+}
+a {
+    display:none;
 }
 #banner_section #matter h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 2.7vw;
-    line-height: 5vw;
+    line-height: 3.5vw;
     color: #212E34;
 }
 #banner_section #matter h1 span {
@@ -52,6 +83,7 @@ overflow: hidden;
     font-size: 1.4vw;
     line-height: 2vw;
     color: #585858;
+    margin: 0.4vw 0 0 0;
 }
 #banner_section #button {
     display: flex;
@@ -105,27 +137,34 @@ overflow: hidden;
     margin: 28vw 0 0 0;
     position: relative;
 }
-#banner_section #matter #dots {
-    position: absolute;
-    top: 56vw;
-    left: 30vw;
+#banner_section #matter {
+    width: 100vw;
 }
-#banner_section #matter #dots #dot {
+.ant-carousel .slick-dots-bottom {
+    bottom: -27vw;
+    right: 0;
+    left: 14vw;
+}
+.ant-carousel .slick-dots li.slick-active {
     width: 2vw;
     height: 2vw;
-    margin: 0 0 0 20px;
+}
+.ant-carousel .slick-dots li {
+    width: 2vw;
+    height: 2vw;
+    margin: 0 0 0 13px;
 }
 #banner_section #matter h1 {
    font-size: 6.2vw;
-   line-height: 10vw;
+   line-height: 8vw;
    text-align: center;
 }
 #banner_section #matter h2 {
-   width: 77vw;
-   font-size: 4.5vw;
-   line-height: 6.5vw;
-   text-align: center;
-   margin: 0.5vw auto auto auto;
+    width: 82vw;
+    font-size: 4.5vw;
+    line-height: 6.5vw;
+    text-align: center;
+    margin: 2.9vw auto auto auto;
 }
 #banner_section #button {
    display: flex;
