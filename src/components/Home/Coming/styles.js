@@ -128,12 +128,12 @@ export const ComingContainer = styled.div`
     #cs_img {
         width: 15vw;
     }
-    .commingsoon_cards{
+    .commingsoon_cards {
         padding: 4vw;
+        grid-template-rows: 15vw auto;
     }
-    .commingsoon_cards_content{
-        grid-row:3/4;
-        padding-top: 4vw;
+    .commingsoon_cards_content {
+        padding-top: 3vw;
     }
     .commingsoon_cards h2 {
         font-style: normal;

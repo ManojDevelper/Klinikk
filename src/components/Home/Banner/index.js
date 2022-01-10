@@ -3,7 +3,8 @@ import { BannerSection } from "./styles.js";
 import icon from "../../../data/assets/play_icon.svg";
 import banner from "../../../data/assets/banner.png";
 import { CloseOutlined } from '@ant-design/icons';
-import { Carousel, Modal } from 'antd';
+import { Carousel } from 'antd';
+import { Modal } from 'react-bootstrap';
 import App from "../Popup/app";
 import Video from "../Popup/Video";
 
@@ -85,43 +86,44 @@ const Banner = () =>
 
                     <div id="button" >
                         <button onClick={ () => setToggle( true ) }>Dowload App</button>
-                        <button onClick={() => setVideoPop(true)}><img src={ icon } alt="img" id='icon' /> Watch Video </button>
+                        <button onClick={ () => setVideoPop( true ) }><img src={ icon } alt="img" id='icon' /> Watch Video </button>
                     </div>
                 </div>
                 <div id="banner_image" >
                     <img src={ banner } alt="banner" />
                 </div>
                 <Modal
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
                     centered
-                    closable
-                    visible={ toggle }
+                    keyboard
+                    id="videomodal"
+                    backdrop="static"
+                    show={ toggle }
                     width={ 1000 }
-                    footer={ null }
-                    closeIcon={ <CloseOutlined style={ { color: `white` } } /> }
-                    okButtonProps={ { style: { display: 'none' } } }
-                    cancelButtonProps={ { style: { display: 'none' } } }
-                    onCancel={ () => setToggle( false ) }
-                    bodyStyle={ { backgroundColor: `white`, height: `100%`, padding: `0` } }
-                    style={ { backgroundColor: `white`, height: `100%`, padding: `0` } }
-                    maskStyle={ { backgroundColor: `white`, height: `fit-content`, padding: `0` } }
-                >
-                    <App />
+                    onHide={ () => setToggle( false ) }
+                    style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
+                    <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
+                    <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setToggle( false ) } />
+                        <App />
+                    </div>
                 </Modal>
                 <Modal
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
                     centered
-                    closable
-                    visible={ videoPop }
+                    keyboard
+                    id="videomodal"
+                    backdrop="static"
+                    show={ videoPop }
                     width={ 1000 }
-                    footer={ null }
-                    closeIcon={ <CloseOutlined style={ { color: `white` } } /> }
-                    okButtonProps={ { style: { display: 'none' } } }
-                    cancelButtonProps={ { style: { display: 'none' } } }
-                    onCancel={ () => setVideoPop(false) }
-                    bodyStyle={ { backgroundColor: `white`, height: `100%`, padding: `0` } }
-                    style={ { backgroundColor: `white`, height: `100%`, padding: `0` } }
-                    maskStyle={ { backgroundColor: `white`, height: `fit-content`, padding: `0` } }
+                    onHide={ () => setVideoPop( false ) }
+                    style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }
                 >
-                    <Video />
+                    <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
+                        <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setVideoPop( false ) } />
+                        <Video />
+                    </div>
                 </Modal>
             </BannerSection>
 

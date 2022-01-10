@@ -23,7 +23,7 @@ export const FooterSection = styled.div`
 }
 .footer_container {
     display: grid;
-    grid-template-columns: 20vw 1fr 8vw 18vw 1fr;
+    grid-template-columns: 20vw 14vw 8vw 18vw 1fr;
     gap: 3.57vw;
     margin: 0;
 }

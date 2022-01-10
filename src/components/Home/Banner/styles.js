@@ -11,6 +11,13 @@ overflow: hidden;
     height: fit-content;
     margin: auto 0 auto 6.8vw;
 }
+#banner_section #vid {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: red;
+}
 #banner_section #matter {
     width: 46vw;
 }
@@ -47,7 +54,7 @@ overflow: hidden;
     width: 5px;
     height: 5px;
     transform: rotate(45deg);
-    border: 1px solid #212E34;
+    border: 1px solid #212e3473;
     position: relative;
     margin: 0 0 0 13px;
 }
@@ -139,9 +146,10 @@ a {
 }
 #banner_section #matter {
     width: 100vw;
+    height: 40vw;
 }
 .ant-carousel .slick-dots-bottom {
-    bottom: -27vw;
+    bottom: -25vw;
     right: 0;
     left: inherit;
     position: relative;
@@ -171,7 +179,7 @@ a {
 }
 #banner_section #button {
    display: flex;
-   margin: 6vw auto auto auto;
+   margin: 5vw auto auto auto;
    width: fit-content;
 }
 #banner_section #button button {

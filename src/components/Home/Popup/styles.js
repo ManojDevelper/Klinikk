@@ -2,15 +2,6 @@ import styled from "styled-components"
 import * as palette from "../../../styles/variables"
 
 export const AppSection = styled.div`
-position: fixed;
-top: 0;
-left: 0;
-height: 100%;
-width: 100%;
-background: black;
-display: flex;
-justify-content: center;
-align-items: center;
  #qr_conatiner {
     width: 64.875vw;
     background: #ffffff;
@@ -180,30 +171,9 @@ align-items: center;
 
 
 export const VideoSection = styled.div`
-position: fixed;
-top: 0;
-left: 0;
-height: 100%;
-width: 100%;
-background: black;
-display: flex;
-justify-content: center;
-align-items: center;
-#banner_pop_video {
-  width: 64.875vw;
-  height: 35vw;
-  border-radius: 1vw;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-}
-#banner_pop_video #player {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 2vw;
+#player {
+  width: 68vw;
+  height: 40vw;
+  margin: 0 16vw;
 }
 `

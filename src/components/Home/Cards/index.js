@@ -17,7 +17,7 @@ import pic16 from "../../../data/assets/p4_i2.png";
 import pic17 from "../../../data/assets/p4_i3.png";
 import { CardsContainer } from "./styles.js";
 import { CloseOutlined } from '@ant-design/icons';
-import { Carousel, Modal } from 'antd';
+import { Modal } from 'react-bootstrap';
 import App from "../Popup/app";
 
 const Cards = () =>
@@ -178,20 +178,20 @@ const Cards = () =>
                 </div>
             </div>
             <Modal
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
                     centered
-                    closable
-                    visible={ toggle }
+                    keyboard
+                    id="videomodal"
+                    backdrop="static"
+                    show={ toggle }
                     width={ 1000 }
-                    footer={ null }
-                    closeIcon={ <CloseOutlined style={ { color: `white` } } /> }
-                    okButtonProps={ { style: { display: 'none' } } }
-                    cancelButtonProps={ { style: { display: 'none' } } }
-                    onCancel={ () => setToggle( false ) }
-                    bodyStyle={ { backgroundColor: `white`, height: `100%`, padding: `0` } }
-                    style={ { backgroundColor: `white`, height: `100%`, padding: `0` } }
-                    maskStyle={ { backgroundColor: `white`, height: `fit-content`, padding: `0` } }
-                >
+                    onHide={ () => setToggle( false ) }
+                    style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
+                    <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
+                    <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setToggle( false ) } />
                     <App />
+                    </div>
                 </Modal>
         </CardsContainer>
     );

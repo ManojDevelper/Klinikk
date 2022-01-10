@@ -55,14 +55,15 @@ export const CardsContainer = styled.div`
     margin: 0.8vw auto 2vw 0;
 }
 #cards_container_main #card #card_block1 button {
-    width: 13.4285714285714vw;
-    height: 3.85714285714286vw;
+    width: 13.4vw;
+    padding: 0.64vw 1.7vw;
     background: #FF4081;
     border-radius: 0.571428571428571vw;
+    font-weight: 600;
+    font-size: 1.2vw;
+    color: #FFFFFF;
     font-style: normal;
     font-weight: 600;
-    font-size: 1.28571428571429vw;
-    line-height: 2.28571428571429vw;
     color: #FFFFFF;
     margin: 2.14285714285714vw auto 0 0;
     border: none;
@@ -257,11 +258,10 @@ export const CardsContainer = styled.div`
         width: 35vw;
     }
      #cards_container_main #card #card_block1 button {
-        width: 38vw;
+        width: 33vw;
         height: 10vw;
         border-radius: 1.3vw;
         font-size: 3.5vw;
-        line-height: 2.28571428571429vw;
         margin: 10vw auto 0 auto;
     }
 
