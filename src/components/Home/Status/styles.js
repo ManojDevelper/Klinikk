@@ -2,6 +2,9 @@ import styled from "styled-components"
 import * as palette from "../../../styles/variables"
 
 export const StatusContainer = styled.div`
+* {
+    font-family: ${palette.FONT_FAMILY} !important;
+}
 .status {
     background: linear-gradient(135deg, #00bde1 0%, #0093c6 100%);
     padding: 11.25vw 0;

@@ -62,9 +62,9 @@ const Nav = () =>
                 <div id="nav_container">
                     <div id="logo">
                         <Link to="/" id="logo_link">
-                            <img src={ logo } alt="image" id="nav_logo" />
+                            <img src={ logo } alt="img" id="nav_logo" />
                         </Link>
-                        <img src={ ham1 } alt="img" id="ham_burger" onClick={ () => setHam( true ) } />
+                        <img src={ ham1 } alt="img" id="ham_burger" onClick={ () => setHam( true ) } role="presentation"/>
                     </div>
                     <div id="nav_items">
                         <Link to="/" id="navlinks">Home</Link>
@@ -72,20 +72,20 @@ const Nav = () =>
                         <Link to="/#cards_container" id="navlinks">Products</Link>
                         <Link to="/#finddoctors" id="navlinks">Find Doctor</Link>
                         <Link to="/#contact" id="navlinks">Contact Us</Link>
-                        <a href="https://www.spotcare.in/auth/login" target="_blank" id="reglink"><button id="navbtn1">Register/Login</button></a>
+                        <a href="https://www.spotcare.in/auth/login" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1">Register/Login</button></a>
                     </div>
                 </div>
             </div>
             {
                 ham ?
                     <div id="nav_items_mob">
-                        <img src={ close } alt="img" id="ham_burger" onClick={ () => setHam( false ) } />
+                        <img src={ close } alt="img" id="ham_burger" onClick={ () => setHam( false ) } role="presentation"/>
                         <Link to="/" id="navlinks" onClick={ () => setHam( false ) }>Home</Link>
                         <Link to="/#about" id="navlinks" onClick={ () => setHam( false ) }>About</Link>
                         <Link to="/#cards_container" id="navlinks" onClick={ () => setHam( false ) }>Products</Link>
                         <Link to="/#finddoctors" id="navlinks" onClick={ () => setHam( false ) }>Find Doctor</Link>
                         <Link to="/#contact" id="navlinks" onClick={ () => setHam( false ) }>Contact Us</Link>
-                        <a href="https://www.spotcare.in/auth/login" target="_blank" id="reglink"><button id="navbtn1" onClick={ () => setHam( false ) }>Register/Login</button></a>
+                        <a href="https://www.spotcare.in/auth/login" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1" onClick={ () => setHam( false ) }>Register/Login</button></a>
                         <div id="nav_icons">
                             <a href="https://www.facebook.com/NaturalMindsInd/" target="_blank" rel="noopener noreferrer"><img src={ fb } alt="img" /></a>
                             <a href="https://www.instagram.com/naturalminds_in/?hl=en" target="_blank" rel="noopener noreferrer"><img src={ insta } alt="img" /></a>

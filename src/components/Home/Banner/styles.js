@@ -2,6 +2,9 @@ import styled from "styled-components"
 import * as palette from "../../../styles/variables"
 
 export const BannerSection = styled.div`
+* {
+    font-family: ${palette.FONT_FAMILY}
+}
 background: #F4FAFD;
 height: 48vw;
 display: flex;

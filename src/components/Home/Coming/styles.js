@@ -3,6 +3,7 @@ import * as palette from "../../../styles/variables"
 
 export const ComingContainer = styled.div`
 * {
+    font-family: ${palette.CONTENT_FONT_FAMILY}
 }
 .commingsoon {
     padding: 109px 0 130px 0;

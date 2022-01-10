@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { VideoSection } from "./styles";
 import video from "../../../data/assets/bannerpop.mp4";
 

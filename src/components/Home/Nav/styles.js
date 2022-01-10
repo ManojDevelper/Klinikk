@@ -2,6 +2,9 @@ import styled from "styled-components"
 import * as palette from "../../../styles/variables"
 
 export const NavSection = styled.div`
+* {
+    font-family: ${palette.CONTENT_FONT_FAMILY} !important;
+  }
 position: fixed;
 top: 0;
 left: 0;

@@ -2,6 +2,9 @@ import styled from "styled-components"
 import * as palette from "../../../styles/variables"
 
 export const AppSection = styled.div`
+* {
+  font-family: ${palette.FONT_FAMILY} !important;
+}
  #qr_conatiner {
     width: 64.875vw;
     background: #ffffff;
@@ -23,7 +26,6 @@ export const AppSection = styled.div`
     margin-top: auto;
   }
    #ql_container_matter h1 {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: bold;
     font-size: 2.5vw;
@@ -40,7 +42,6 @@ export const AppSection = styled.div`
     top: 0.5vw;
   }
    #ql_container_matter p {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 0.9375vw;
@@ -56,7 +57,6 @@ export const AppSection = styled.div`
     margin-top: 3.75vw;
   }
    #qr_container_input_block h1 {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 1.25vw;
@@ -87,7 +87,6 @@ export const AppSection = styled.div`
     border: none;
     outline: none;
     background: transparent;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 400;
     font-size: 1vw;
@@ -96,7 +95,6 @@ export const AppSection = styled.div`
   }
    #qr_container_input_block_container_container p {
     margin: 0;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 1vw;
@@ -115,7 +113,6 @@ export const AppSection = styled.div`
     border-radius: 0.5vw;
     border: none;
     outline: none;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 1vw;
