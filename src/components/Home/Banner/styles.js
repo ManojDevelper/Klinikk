@@ -143,7 +143,10 @@ a {
 .ant-carousel .slick-dots-bottom {
     bottom: -27vw;
     right: 0;
-    left: 14vw;
+    left: inherit;
+    position: relative;
+    width: fit-content;
+    margin: auto;
 }
 .ant-carousel .slick-dots li.slick-active {
     width: 2vw;
