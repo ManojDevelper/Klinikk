@@ -6,7 +6,7 @@ import { CloseOutlined } from '@ant-design/icons';
 import { Carousel } from 'antd';
 import { Modal } from 'react-bootstrap';
 import App from "../Popup/app";
-import Video from "../Popup/Video";
+import Video from "../Popup/video";
 
 const Banner = () =>
 {
