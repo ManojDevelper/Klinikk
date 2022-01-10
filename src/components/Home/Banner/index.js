@@ -93,6 +93,7 @@ const Banner = () =>
                 </div>
                 <Modal
                     centered
+                    closable
                     visible={ toggle }
                     width={ 1000 }
                     footer={ null }
@@ -108,6 +109,7 @@ const Banner = () =>
                 </Modal>
                 <Modal
                     centered
+                    closable
                     visible={ videoPop }
                     width={ 1000 }
                     footer={ null }

@@ -150,7 +150,10 @@ align-items: center;
     align-items: center;
     margin-top: auto;
   }
-   #qr_image_button button {
+  #qr_image_button a {
+    margin-left: 2vw;
+  }
+   #qr_image_button a button {
     width: 10.125vw;
     height: 3vw;
     background: #212e34;
@@ -158,19 +161,18 @@ align-items: center;
     margin: 0;
     font-style: normal;
     font-weight: 600;
-    font-size: 1.125vw;
+    font-size: 0.9vw;
     color: #ffffff;
     border: none;
     outline: none;
     cursor: pointer;
-    margin-left: 2vw;
     display: flex;
     align-items: center;
   }
-   #qr_image_button button:first-child {
+   #qr_image_button a:first-child {
     margin-left: 0;
   }
-   #qr_image_button button img {
+   #qr_image_button a button img {
     margin: 0 1vw 0 0.5vw;
     width: 1.5vw;
   }

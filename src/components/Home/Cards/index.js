@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import pic1 from "../../../data/assets/p4_i1.png";
 import pic2 from "../../../data/assets/p4_c1_i1.svg";
 import pic3 from "../../../data/assets/p4_c1_i2.svg";
@@ -16,9 +16,13 @@ import pic15 from "../../../data/assets/p4_c1_h_i9.svg";
 import pic16 from "../../../data/assets/p4_i2.png";
 import pic17 from "../../../data/assets/p4_i3.png";
 import { CardsContainer } from "./styles.js";
+import { CloseOutlined } from '@ant-design/icons';
+import { Carousel, Modal } from 'antd';
+import App from "../Popup/app";
 
 const Cards = () =>
 {
+    const [ toggle, setToggle ] = useState();
 
     return (
         <CardsContainer>
@@ -26,7 +30,7 @@ const Cards = () =>
                 <h1>OUR PRODUCTS</h1>
                 <div id="cards_container_main">
                     <div id="card">
-                        <div id="card_main">
+                        <div className="card_main" id="Intelligent" >
                             <div id="card_block1">
                                 <h1>SpotCare™ Klinik-in-a-Kiosk</h1>
                                 <p>SpotCare™ Klinik-in-a-Kiosk is primarily designed to provide neighbourhood solutions to an enclosed entity. It brings in remote doctor's desk by integrating vitals measuring medical device at the patient end of Kiosk, which is controlled and operated by the doctor remotely</p>
@@ -52,7 +56,7 @@ const Cards = () =>
                                         <p>Connects local pharmacies and labs</p>
                                     </div>
                                 </div>
-                                <button>Download App</button>
+                                <button onClick={ () => setToggle( true ) }>Download App</button>
                             </div>
                             <div id="card_block2">
                                 <img src={ pic1 } alt="img" />
@@ -102,7 +106,7 @@ const Cards = () =>
                     </div>
 
                     <div id="card">
-                        <div id="card_main">
+                        <div className="card_main" id="platform">
                             <div id="card_block1">
                                 <h1>SpotCare™ Intelligent Patient Care Platform</h1>
                                 <p>SpotCare™ is a state-of-the-art omni-channel system that allows doctors to keep electronic medical records  in a safe and secure way. SpotCare™ Doctor and SpotCare Patient Apps work together seamlessly to bring in convenience and quality to every doctor's consultation.</p>
@@ -128,7 +132,7 @@ const Cards = () =>
                                         <p>Your patients refer you in their network</p>
                                     </div>
                                 </div>
-                                <button>Download App</button>
+                                <button onClick={ () => setToggle( true ) }>Download App</button>
                             </div>
                             <div id="card_block2">
                                 <img src={ pic16 } alt="img" />
@@ -138,7 +142,7 @@ const Cards = () =>
 
 
                     <div id="card">
-                        <div id="card_main">
+                        <div className="card_main" id="klinik">
                             <div id="card_block1">
                                 <h1>TeleCare</h1>
                                 <p>TeleCare is a world-class, High-definition TeleHealth offering from Klinik Everywhere. It enables doctors to provide high-quality, real-time teleconsultation to their patients while working on their EMR. TeleCare provides flexibility in consultation timing. It also allows doctors and patients to consult without fear of time-out.</p>
@@ -164,7 +168,7 @@ const Cards = () =>
                                         <p>Doctors can use across devices</p>
                                     </div>
                                 </div>
-                                <button>Download App</button>
+                                <button onClick={ () => setToggle( true ) }>Download App</button>
                             </div>
                             <div id="card_block2">
                                 <img src={ pic17 } alt="img" />
@@ -173,6 +177,22 @@ const Cards = () =>
                     </div>
                 </div>
             </div>
+            <Modal
+                    centered
+                    closable
+                    visible={ toggle }
+                    width={ 1000 }
+                    footer={ null }
+                    closeIcon={ <CloseOutlined style={ { color: `white` } } /> }
+                    okButtonProps={ { style: { display: 'none' } } }
+                    cancelButtonProps={ { style: { display: 'none' } } }
+                    onCancel={ () => setToggle( false ) }
+                    bodyStyle={ { backgroundColor: `white`, height: `100%`, padding: `0` } }
+                    style={ { backgroundColor: `white`, height: `100%`, padding: `0` } }
+                    maskStyle={ { backgroundColor: `white`, height: `fit-content`, padding: `0` } }
+                >
+                    <App />
+                </Modal>
         </CardsContainer>
     );
 };

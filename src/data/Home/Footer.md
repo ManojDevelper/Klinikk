@@ -18,8 +18,8 @@ footer:
           title: "Products",
           list1: "Intelligent Patient Care Platform",
           list2: "Klinik in a Kiosk",
-          link1: "/landing/#SpotCarelink",
-          link2: "/landing/#eleCarelink",
+          link1: "/#Intelligent",
+          link2: "/#klinik",
       },
       {
           id: 3,
@@ -29,8 +29,8 @@ footer:
           list3: "About Team",
           list4: "Blogs & Articles",
           link1: "/",
-          link2: "/",
-          link3: "/",
+          link2: "/#ourcustomers",
+          link3: "/#coreteam_main_container",
           link4: "/#blog",
       },
       {

@@ -18,12 +18,12 @@ export const CardsContainer = styled.div`
     color: #000000;
     text-align: center;
   }
-#cards_container_main #card #card_main {
+#cards_container_main #card .card_main {
     display: flex;
     padding: 7.14285714285714vw 5.71428571428571vw;
     justify-content: space-between;
 }
-#cards_container_main #card:nth-child(even) #card_main {
+#cards_container_main #card:nth-child(even) .card_main {
     flex-direction: row-reverse;
     background: #F4FAFD;
 }
@@ -187,14 +187,14 @@ export const CardsContainer = styled.div`
      #cards_container h1 {
         font-size: 5.3vw;
     }
-    #cards_container_main #card #card_main:nth-child(1) {
+    #cards_container_main #card .card_main:nth-child(1) {
         padding: 16vw 0;
         flex-direction: column-reverse;
     }
-     #cards_container_main #card #card_main:nth-child(1) {
+     #cards_container_main #card .card_main:nth-child(1) {
         padding: 10vw 0 16vw 0;
     }
-    #cards_container_main #card:nth-child(even) #card_main {
+    #cards_container_main #card:nth-child(even) .card_main {
         flex-direction: column-reverse;
         padding: 16vw 0;
     }

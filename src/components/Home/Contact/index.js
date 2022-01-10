@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { API_ROOT } from "gatsby-env-variables";
 import { ContactContainer } from "./styles";
+import { message } from 'antd';
 import img6 from "../../../data/assets/contact.png";
 
 const Contact = () => {
@@ -54,21 +55,29 @@ const Contact = () => {
         console.log( status )
         if ( result.status === true )
         {
-            // toast.success(result.msg, {
-            //     position: `top-center`
-            // })
+            success();
         } else
         {
-            // toast.error("Please Try Again", {
-            //     position: `top-center`
-            // })
+            error();
         }
 
     }
     function signup2 ()
     {
         setErrors( validation() )
+        warning();
     }
+    const success = () => {
+        message.success('Registered');
+      };
+      
+      const error = () => {
+        message.error('Error');
+      };
+      const warning = () => {
+        message.warning('Fill the required fields');
+      };
+
     return (
         <ContactContainer>
             <div className="contact" id="contact">

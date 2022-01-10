@@ -2,10 +2,8 @@ import React, { useState } from "react"
 import qr1 from "../../../data/assets/patentqr.png"
 import playstorebtn from "../../../data/assets/playstore_btn.svg"
 import appstorebtn from "../../../data/assets/appstore_btn.svg"
-import video from "../../../data/assets/bannerpop.mp4";
 import { API_ROOT } from "gatsby-env-variables";
 import { AppSection } from "./styles";
-import { CloseOutlined, SmileOutlined } from '@ant-design/icons';
 import { message } from 'antd';
 
 const App = ( ) =>
@@ -90,8 +88,8 @@ const App = ( ) =>
                             <img src={ qr1 } alt="qr" />
                         </div>
                         <div id="qr_image_button">
-                            <button ><img src={ playstorebtn } alt="img" />Google Play</button>
-                            <button ><img src={ appstorebtn } alt="img" />App Store</button>
+                            <a href="https://play.google.com/store/apps/details?id=com.carereceiver"><button ><img src={ playstorebtn } alt="img" />Google Play</button></a>
+                            <a href="https://apps.apple.com/in/app/spotcare-patients-public/id1535914517"><button ><img src={ appstorebtn } alt="img" />App Store</button></a>
                         </div>
                     </div>
                 </div>
