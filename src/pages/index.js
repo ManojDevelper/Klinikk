@@ -18,7 +18,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () =>
 {
-  const [ loading, setLoading ] = useState( "" );
+  const [ loading, setLoading ] = useState( true );
 
   useEffect( () =>
   {
