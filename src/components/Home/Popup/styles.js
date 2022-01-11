@@ -164,6 +164,56 @@ export const AppSection = styled.div`
     margin: 0 1vw 0 0.5vw;
     width: 1.5vw;
   }
+  @media (max-width: 750px) {
+    #qr_conatiner {
+      width: 93vw;
+  }
+  #qr_conatiner_block1 {
+    width: 47vw;
+   }
+   #ql_container_matter h1 {
+    font-size: 4.5vw;
+    line-height: 4.6vw;
+   }
+   #ql_container_matter p {
+    font-size: 2.5vw;
+    line-height: 3.2vw;
+    text-align: justify;
+    margin-top: 2vw;
+    width: 47vw;
+    text-align: justify;
+    }
+    #qr_container_input_block h1 {
+      font-size: 2.5vw;
+      line-height: inherit;
+      color: #000000;
+  }
+  #qr_container_input_block_container {
+    grid-template-columns: 26vw 15vw;
+    gap: 1.5vw;
+    grid-template-rows: 4vw;
+    margin-top: 1.2vw;
+  }
+   #qr_container_input_block_container_container input {
+    width: 21vw;
+    font-size: 1.5vw;
+  }
+   #qr_container_input_block_container_container p {
+     font-size: 1.5vw;
+   }
+   #qr_container_input_block button {
+    font-size: 1.5vw;
+}
+   #qu_image_container img {
+    width: 25vw;
+   }
+   #qr_image_button a button {
+    width: 14vw;
+    height: 4vw;
+    border-radius: 0.8vw;
+    font-size: 1.5vw;
+  }
+}
 `
 
 
@@ -172,5 +222,11 @@ export const VideoSection = styled.div`
   width: 68vw;
   height: 40vw;
   margin: 0 16vw;
+}
+@media (max-width: 750px) {
+  #player{
+    width: 100vw;
+    height: 54vw;
+  }
 }
 `

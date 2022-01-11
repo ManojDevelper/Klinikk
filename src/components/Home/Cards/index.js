@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import pic1 from "../../../data/assets/p4_i1.png";
 import pic2 from "../../../data/assets/p4_c1_i1.svg";
 import pic3 from "../../../data/assets/p4_c1_i2.svg";
@@ -142,7 +142,7 @@ const Cards = () =>
 
 
                     <div id="card">
-                        <div className="card_main" id="klinik">
+                        <div className="card_main" id="Telecare">
                             <div id="card_block1">
                                 <h1>TeleCare</h1>
                                 <p>TeleCare is a world-class, High-definition TeleHealth offering from Klinik Everywhere. It enables doctors to provide high-quality, real-time teleconsultation to their patients while working on their EMR. TeleCare provides flexibility in consultation timing. It also allows doctors and patients to consult without fear of time-out.</p>
@@ -178,21 +178,21 @@ const Cards = () =>
                 </div>
             </div>
             <Modal
-                    size="lg"
-                    aria-labelledby="contained-modal-title-vcenter"
-                    centered
-                    keyboard
-                    id="videomodal"
-                    backdrop="static"
-                    show={ toggle }
-                    width={ 1000 }
-                    onHide={ () => setToggle( false ) }
-                    style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
-                    <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered
+                keyboard
+                id="videomodal"
+                backdrop="static"
+                show={ toggle }
+                width={ 1000 }
+                onHide={ () => setToggle( false ) }
+                style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
+                <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
                     <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setToggle( false ) } />
                     <App />
-                    </div>
-                </Modal>
+                </div>
+            </Modal>
         </CardsContainer>
     );
 };

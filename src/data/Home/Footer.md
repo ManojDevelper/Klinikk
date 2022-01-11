@@ -3,7 +3,6 @@ store1: "../assets/main_play_store.png"
 store2: "../assets/main_app_store.png"
 app1: "Doctor App"
 app2: "Patient App"
-copyright: "Copyright © 2022 Klinik Everywhere Private Limited"
 footer: 
   [
       {
@@ -16,10 +15,12 @@ footer:
       {
           id: 2,
           title: "Products",
-          list1: "Intelligent Patient Care Platform",
-          list2: "Klinik in a Kiosk",
-          link1: "/#Intelligent",
-          link2: "/#klinik",
+          list1: "Klinik in a Kiosk",
+          list2: "Intelligent Patient Care Platform",
+          list3: "Telecare",
+          link1: "/#klinik",
+          link2: "/#platform",
+          link3: "/#Telecare",
       },
       {
           id: 3,
@@ -37,7 +38,7 @@ footer:
           id: 4,
           title: "Contact us",
           list1: "+91-78299 99580, +91-98336 97550", 
-          list3: "contact@klinikeverywhere.com",
+          list2: "contact@klinikeverywhere.com",
       },
   ]
 footericons: 

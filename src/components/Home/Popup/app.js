@@ -13,6 +13,7 @@ const App = ( ) =>
     const [errors, setErrors] = useState({});
     const [mobile_no, setMobile_no] = useState("")
     const [patFinal, setPatFinal] = useState("")
+   
     const Patentvalidation = () => {
         let errors = {};
         if (!mobile_no) {
@@ -20,10 +21,10 @@ const App = ( ) =>
         } else {
             errors.mobile_no = ""
         } if (patFinal.status === true) {
-            success()
+            success();
             setMobile_no("")
         } else {
-            error()
+            error();
         }
         return errors;
     }
@@ -52,7 +53,6 @@ const App = ( ) =>
         patResult = await patResult.json()
         setErrors(Patentvalidation())
         setPatFinal(patResult)
-        console.log(patFinal)
     }
 
 

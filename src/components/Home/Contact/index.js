@@ -4,13 +4,14 @@ import { ContactContainer } from "./styles";
 import { message } from 'antd';
 import img6 from "../../../data/assets/contact.png";
 
-const Contact = () => {
+const Contact = () =>
+{
 
     const [ name, setName ] = useState( "" )
     const [ subject, setSubject ] = useState( "" )
     const [ email, setEmail ] = useState( "" )
     const [ query, setQuery ] = useState( "" )
-    const [ status, setStatus ] = useState( "" )
+    const [ finalStatus, setFinalStatus ] = useState( "" )
     const [ errors, setErrors ] = useState( {} );
     const validation = () =>
     {
@@ -51,32 +52,43 @@ const Contact = () => {
             },
         } )
         result = await result.json()
-        setStatus( result )
-        console.log( status )
+        setFinalStatus( result )
         if ( result.status === true )
         {
             success();
+            clear();
         } else
         {
             error();
         }
-
+        console.log( result.status )
     }
-    function signup2 ()
+    const signup2 = ()=>
     {
         setErrors( validation() )
         warning();
     }
-    const success = () => {
-        message.success('Registered');
-      };
-      
-      const error = () => {
-        message.error('Error');
-      };
-      const warning = () => {
-        message.warning('Fill the required fields');
-      };
+    const success = () =>
+    {
+        message.success( 'Registered' );
+    };
+
+    const error = () =>
+    {
+        message.error( 'Error' );
+    };
+    const warning = () =>
+    {
+        message.warning( 'Fill the required fields' );
+    };
+
+    const clear = () =>
+    {
+        setName( "" )
+        setSubject( "" )
+        setEmail( "" )
+        setQuery( "" )
+    }
 
     return (
         <ContactContainer>

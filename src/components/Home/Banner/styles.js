@@ -57,7 +57,7 @@ overflow: hidden;
     width: 5px;
     height: 5px;
     transform: rotate(45deg);
-    border: 1px solid #212e3473;
+    border: 1px solid #bbb;
     position: relative;
     margin: 0 0 0 13px;
 }
@@ -149,10 +149,10 @@ a {
 }
 #banner_section #matter {
     width: 100vw;
-    height: 40vw;
+    height: 39vw;
 }
 .ant-carousel .slick-dots-bottom {
-    bottom: -25vw;
+    bottom: -20vw;
     right: 0;
     left: inherit;
     position: relative;
@@ -160,12 +160,12 @@ a {
     margin: auto;
 }
 .ant-carousel .slick-dots li.slick-active {
-    width: 2vw;
-    height: 2vw;
+    width: 1vw;
+    height: 1vw;
 }
 .ant-carousel .slick-dots li {
-    width: 2vw;
-    height: 2vw;
+    width: 1vw;
+    height: 1vw;
     margin: 0 0 0 13px;
 }
 #banner_section #matter h1 {
@@ -182,7 +182,7 @@ a {
 }
 #banner_section #button {
    display: flex;
-   margin: 5vw auto auto auto;
+   margin: 0 auto auto auto;
    width: fit-content;
 }
 #banner_section #button button {

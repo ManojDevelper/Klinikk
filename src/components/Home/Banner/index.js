@@ -17,15 +17,11 @@ const Banner = () =>
         {
             "title": "SpotCare",
             "tm": "™",
-            "title2": "Klinik - in -a - Kiosk",
-            "description": " Full - fledged Virtual Outpatient Clinic allowing diagnostic consultations",
+            "title2": "Klinik-in-a-Kiosk",
+            "description": "Full-fledged Virtual Outpatient Clinic allowing diagnostic consultations",
         },
         {
             "title": " Provide Inclusive Healthcare ",
-            "description": " Make Healthcare accessible, affordable and available to all",
-        },
-        {
-            "title": "Provide Inclusive Healthcare ",
             "description": "Make Healthcare accessible, affordable and available to all",
         },
         {
@@ -54,15 +50,15 @@ const Banner = () =>
         },
         {
             "title": "Grow Hospital FootPrint ",
-            "description": "Extends Hospitals network through deployment to Outreach centers & facilitating local communities with ease of access to a hospital network",
+            "description": "Extends Hospitals network through deployment to Outreach centers & facilitating local communities",
         },
         {
             "title": "A boon for the Elderly ",
             "description": "Provides round-the-clock healthcare support to old-age homes and elderly societies",
         },
         {
-            "title": "Community-centric health facility, benefits societies at large ",
-            "description": "",
+            "title": "Community-centric health facility ",
+            "description": "Benefits societies at large",
         },
     ]
 
@@ -77,7 +73,9 @@ const Banner = () =>
                         <Carousel autoplay>
                             { data && data.map( ( content, i ) =>
                                 <div key={ i }>
-                                    <h1>{ content.title }</h1>
+                                    { content.tm ? <h1>{ content.title }<span>{ content.tm }</span>&nbsp;{ content.title2 }</h1>
+                                        :
+                                        <h1>{ content.title }</h1> }
                                     <h2>{ content.description }</h2>
                                 </div>
                             ) }
@@ -104,7 +102,7 @@ const Banner = () =>
                     onHide={ () => setToggle( false ) }
                     style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
                     <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
-                    <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setToggle( false ) } />
+                        <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setToggle( false ) } />
                         <App />
                     </div>
                 </Modal>
