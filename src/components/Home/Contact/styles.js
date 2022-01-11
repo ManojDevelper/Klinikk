@@ -116,6 +116,7 @@ export const ContactContainer = styled.div`
     outline: none;
     border: none;
     margin: auto;
+    cursor: pointer;
 }
 @media (max-width: 1000px) {
     .contact_contrainer {
