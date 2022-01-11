@@ -30,7 +30,7 @@ const Cards = () =>
                 <h1>OUR PRODUCTS</h1>
                 <div id="cards_container_main">
                     <div id="card">
-                        <div className="card_main" id="Intelligent" >
+                        <div className="card_main" id="Klinik" >
                             <div id="card_block1">
                                 <h1>SpotCare™ Klinik-in-a-Kiosk</h1>
                                 <p>SpotCare™ Klinik-in-a-Kiosk is primarily designed to provide neighbourhood solutions to an enclosed entity. It brings in remote doctor's desk by integrating vitals measuring medical device at the patient end of Kiosk, which is controlled and operated by the doctor remotely</p>
@@ -106,7 +106,7 @@ const Cards = () =>
                     </div>
 
                     <div id="card">
-                        <div className="card_main" id="platform">
+                        <div className="card_main" id="SpotCare">
                             <div id="card_block1">
                                 <h1>SpotCare™ Intelligent Patient Care Platform</h1>
                                 <p>SpotCare™ is a state-of-the-art omni-channel system that allows doctors to keep electronic medical records  in a safe and secure way. SpotCare™ Doctor and SpotCare Patient Apps work together seamlessly to bring in convenience and quality to every doctor's consultation.</p>

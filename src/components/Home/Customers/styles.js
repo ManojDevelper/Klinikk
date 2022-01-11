@@ -102,7 +102,7 @@ export const CustomersContainer = styled.div`
     opacity: 0.7;
 }
 /*=======mediaquaries==========*/
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     .ourcustomers {
         padding: 9vw 5vw 20vw 5vw;
     }

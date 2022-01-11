@@ -71,7 +71,7 @@ z-index: 5;
     display: none;
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
     #nav_container {
         height: fit-content;
         padding: 18px;

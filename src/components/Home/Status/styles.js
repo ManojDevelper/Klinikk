@@ -58,7 +58,7 @@ export const StatusContainer = styled.div`
     line-height: 1.8vw;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     .status {
         padding: 20vw 0;
         display: flex;

@@ -183,7 +183,7 @@ export const ContactContainer = styled.div`
         margin-top: 6vw;
     }
 }
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     .contact {
         padding: 20vw 0;
         background: white;

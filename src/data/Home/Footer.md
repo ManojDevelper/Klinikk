@@ -19,7 +19,7 @@ footer:
           list2: "Intelligent Patient Care Platform",
           list3: "Telecare",
           link1: "/#klinik",
-          link2: "/#platform",
+          link2: "/#SpotCare",
           link3: "/#Telecare",
       },
       {

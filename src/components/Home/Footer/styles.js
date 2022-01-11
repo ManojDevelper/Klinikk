@@ -106,7 +106,7 @@ export const FooterSection = styled.div`
     width: 1.8125vw;
     margin-left: 1.25vw;
 }
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     .footer {
         padding: 8.75vw 5vw;
     }

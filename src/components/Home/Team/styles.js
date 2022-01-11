@@ -227,7 +227,7 @@ margin: auto 0 auto 1.9375vw;
   height: 100%;
   background: #ff4081;
 }
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .coreteam_container {
     padding: 10vw 5vw 12vw 5vw;
     background-color: white;
@@ -448,7 +448,7 @@ margin: 0;
 right: 1vw;
 width: 1.25vw;
 }
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 .coreteam_container {
   padding: 10vw 5vw 12vw 5vw;
   background-color: white;

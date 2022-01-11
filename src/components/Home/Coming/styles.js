@@ -109,7 +109,7 @@ export const ComingContainer = styled.div`
         line-height: 1.8vw;
     }
 }
-@media (max-width:650px){
+@media (max-width:750px){
     .commingsoon{
         height: fit-content;
         padding: 20vw 0;
