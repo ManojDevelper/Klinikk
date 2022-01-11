@@ -12,7 +12,7 @@ const Contact = () =>
     const [ email, setEmail ] = useState( "" )
     const [ query, setQuery ] = useState( "" )
     const [ finalStatus, setFinalStatus ] = useState( "" )
-    const [ errors, setErrors ] = useState( {} );
+    const [ errors, setErrors ] = useState( false );
     const validation = () =>
     {
 
@@ -57,6 +57,7 @@ const Contact = () =>
         {
             success();
             clear();
+            setErrors(true)
         } else
         {
             error();
