@@ -10,34 +10,7 @@ const App = ( ) =>
 {
 
     /*==================Api calling for patient form====================*/
-    const [errors, setErrors] = useState({});
-    const [mobile_no, setMobile_no] = useState("")
-    const [patFinal, setPatFinal] = useState("")
-   
-    const Patentvalidation = () => {
-        let errors = {};
-        if (!mobile_no) {
-            errors.mobile_no = "**Enter your Mobile Number"
-        } else {
-            errors.mobile_no = ""
-        } if (patFinal.status === true) {
-            success();
-            setMobile_no("")
-        } else {
-            error();
-        }
-        return errors;
-    }
-    const success = () => {
-        message.success('Registered');
-      };
-      
-      const error = () => {
-        message.error('Error');
-      };
-      const warning = () => {
-        message.warning('Enter your mobile number');
-      };
+    const [mobile_no, setMobile_no] = useState("");   
 
     async function sendPat() {
         let item = { mobile_no }
@@ -50,11 +23,25 @@ const App = ( ) =>
                 Accept: "application/json",
             },
         })
-        patResult = await patResult.json()
-        setErrors(Patentvalidation())
-        setPatFinal(patResult)
+
+        patResult = await patResult.json();
+        if (patResult.status === true) {
+            success();
+        } else {
+            error();
+        }
     }
 
+    const success = () => {
+        message.success('Link Sent');
+      };
+      
+      const error = () => {
+        message.error('Please try again');
+      };
+      const warning = () => {
+        message.warning('Enter your mobile number');
+      };
 
     return (
         <AppSection >
@@ -78,7 +65,6 @@ const App = ( ) =>
                                     <button onClick={sendPat}>Get App Link</button>
                                 ) }
                             </div>
-                            { errors.mobile_no && <p className="errors" style={ { fontSize: `1vw`, color: `orange`, position: `absolute`, margin: `0`, transition: `0.5s ease` } }>Mobile Number</p> }
                         </div>
                     </div>
                 </div>
