@@ -8,6 +8,9 @@ import twitter from "../../../data/assets/navtwitter.svg";
 import Navtube from "../../../data/assets/navtube.svg";
 import ham1 from "../../../data/assets/ham.svg";
 import close from "../../../data/assets/close.svg";
+import logo1 from "../../../images/logo.svg"
+import logo2 from "../../../images/logo2.svg"
+import "../../../styles/banner.css";
 
 const Nav = () =>
 {
@@ -62,7 +65,10 @@ const Nav = () =>
                 <div id="nav_container">
                     <div id="logo">
                         <Link to="/" id="logo_link">
-                            <img src={ logo } alt="img" id="nav_logo" />
+                            <div id="nav_logo">
+                            <img src={ logo1 } alt="img" id="nav_logo1" />
+                            <img src={ logo2 } alt="img" id="nav_logo2" />
+                            </div>
                         </Link>
                         <img src={ ham1 } alt="img" id="ham_burger" onClick={ () => setHam( true ) } role="presentation"/>
                     </div>

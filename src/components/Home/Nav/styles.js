@@ -60,10 +60,27 @@ z-index: 5;
 #nav_container #logo {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 #nav_container #nav_logo {
-    width: 9.14vw;
+    width: fit-content;
+    display: flex;
+    align-items: center;
 }
+#nav_container #nav_logo #nav_logo1 {
+    width: 2.55vw;
+    animation-name: example2;
+    animation-duration: 4s;
+    transition: 0.5s ease-in-out;
+}
+#nav_container #nav_logo #nav_logo2 {
+    width: 6.15vw;
+    margin: 0 0 0 0.42vw;
+}
+@keyframes example2 {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
 #nav_container #ham_burger {
     display: none;
 }
@@ -83,6 +100,9 @@ z-index: 5;
         justify-content: space-between;
         align-items: center;
     }
+    #nav_container #nav_logo #nav_logo2 {
+        margin: 0 0 0 5px;
+    }
     #nav_container #logo #logo_link {
         display: flex;
     }
@@ -92,8 +112,14 @@ z-index: 5;
         height: 24px;
     }
     #nav_container #nav_logo {
-        width: 89px;
         margin: auto 0 auto 0;
+    }
+    #nav_container #nav_logo #nav_logo1 {
+        width: 35px;
+    }
+    #nav_container #nav_logo #nav_logo2 {
+        width: 80px;
+        margin: 0 0 0 5px;
     }
     #nav_container #nav_items {
         display: none;
