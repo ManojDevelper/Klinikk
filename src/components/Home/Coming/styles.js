@@ -122,7 +122,7 @@ export const ComingContainer = styled.div`
         margin: auto;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: repeat(3, 80vw);
+        grid-template-rows: repeat(3, 93vw);
         gap: 13.3vw;
         margin-top: 17.2vw;
     }
