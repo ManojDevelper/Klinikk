@@ -27,6 +27,7 @@ const App = ( ) =>
         patResult = await patResult.json();
         if (patResult.status === true) {
             success();
+            setMobile_no();
         } else {
             error();
         }
