@@ -84,7 +84,7 @@ const Banner = () =>
 
                     <div id="button" >
                         <button onClick={ () => setToggle( true ) }>Dowload App</button>
-                        <button onClick={ () => setVideoPop( true ) }><img src={ icon } alt="img" id='icon' /> Watch Video </button>
+                        <button onClick={ () => setVideoPop( true ) } disabled><img src={ icon } alt="img" id='icon' /> Watch Video </button>
                     </div>
                 </div>
                 <div id="banner_image" >
@@ -100,8 +100,8 @@ const Banner = () =>
                     show={ toggle }
                     width={ 1000 }
                     onHide={ () => setToggle( false ) }
-                    style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
-                    <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
+                    style={ { background: `black`, position: `fixed`, top: `0`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
+                    <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
                         <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setToggle( false ) } />
                         <App />
                     </div>
@@ -116,9 +116,9 @@ const Banner = () =>
                     show={ videoPop }
                     width={ 1000 }
                     onHide={ () => setVideoPop( false ) }
-                    style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }
+                    style={ { background: `black`, position: `fixed`, top: `0`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }
                 >
-                    <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
+                    <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
                         <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setVideoPop( false ) } />
                         <Video />
                     </div>

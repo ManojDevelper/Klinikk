@@ -3,7 +3,7 @@ import * as palette from "../../../styles/variables"
 
 export const AppSection = styled.div`
 * {
-  font-family: ${palette.FONT_FAMILY} !important;
+  font-family: ${palette.CONTENT_FONT_FAMILY} !important;
 }
  #qr_conatiner {
     width: 64.875vw;
@@ -14,10 +14,10 @@ export const AppSection = styled.div`
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    padding: 7.1875vw 3.5vw;
+    padding: 4vw 3.5vw;
   }
    #qr_conatiner_block1 {
-    width: 27.6875vw;
+    width: 32vw;
     display: flex;
     height: fit-content;
   }
@@ -169,14 +169,14 @@ export const AppSection = styled.div`
       width: 93vw;
   }
   #qr_conatiner_block1 {
-    width: 47vw;
+    width: 53vw;
    }
    #ql_container_matter h1 {
-    font-size: 4.5vw;
+    font-size: 4vw;
     line-height: 4.6vw;
    }
    #ql_container_matter p {
-    font-size: 2.5vw;
+    font-size: 2vw;
     line-height: 3.2vw;
     text-align: justify;
     margin-top: 2vw;

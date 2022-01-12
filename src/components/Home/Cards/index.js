@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import pic1 from "../../../data/assets/p4_i1.png";
 import pic2 from "../../../data/assets/p4_c1_i1.svg";
 import pic3 from "../../../data/assets/p4_c1_i2.svg";
@@ -17,12 +17,12 @@ import pic16 from "../../../data/assets/p4_i2.png";
 import pic17 from "../../../data/assets/p4_i3.png";
 import { CardsContainer } from "./styles.js";
 import { CloseOutlined } from '@ant-design/icons';
-import { Modal } from 'react-bootstrap';
 import App from "../Popup/app";
 
 const Cards = () =>
 {
-    const [ toggle, setToggle ] = useState();
+    const [ open, setOpen ] = useState( false );
+
 
     return (
         <CardsContainer>
@@ -56,7 +56,7 @@ const Cards = () =>
                                         <p>Connects local pharmacies and labs</p>
                                     </div>
                                 </div>
-                                <button onClick={ () => setToggle( true ) }>Download App</button>
+                                <button onClick={ () => setOpen( true ) } >Download App</button>
                             </div>
                             <div id="card_block2">
                                 <img src={ pic1 } alt="img" />
@@ -132,7 +132,7 @@ const Cards = () =>
                                         <p>Your patients refer you in their network</p>
                                     </div>
                                 </div>
-                                <button onClick={ () => setToggle( true ) }>Download App</button>
+                                <button onClick={ () => setOpen( true ) }>Download App</button>
                             </div>
                             <div id="card_block2">
                                 <img src={ pic16 } alt="img" />
@@ -168,7 +168,7 @@ const Cards = () =>
                                         <p>Doctors can use across devices</p>
                                     </div>
                                 </div>
-                                <button onClick={ () => setToggle( true ) }>Download App</button>
+                                <button onClick={ () => setOpen( true ) }>Download App</button>
                             </div>
                             <div id="card_block2">
                                 <img src={ pic17 } alt="img" />
@@ -177,22 +177,16 @@ const Cards = () =>
                     </div>
                 </div>
             </div>
-            <Modal
-                size="lg"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered
-                keyboard
-                id="videomodal"
-                backdrop="static"
-                show={ toggle }
-                width={ 1000 }
-                onHide={ () => setToggle( false ) }
-                style={ { background: `#000000bf`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `10`, padding: `5vw 0` } }>
-                <div id="vid" style={ { background: `transparent`, position: `fixed`, top: `0`, display: `flex`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
-                    <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setToggle( false ) } />
-                    <App />
-                </div>
-            </Modal>
+            {
+                open ?
+                    <div id="vid" style={ { background: `black`, position: `fixed`, top: `0`, width: `100%`, height: `100vh`, display: `flex`, justifyContent: `center`, alignItems: `center`, zIndex: `50`, padding: `5vw 0` } }>
+                        <CloseOutlined style={ { color: `white`, position: `absolute`, right: `51px`, top: `20px` } } onClick={ () => setOpen( false ) } />
+                        <App />
+                    </div>
+                    :
+                    ""
+            }
+
         </CardsContainer>
     );
 };
