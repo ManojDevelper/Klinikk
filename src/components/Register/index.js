@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { navigate } from "gatsby";
 import { RegisterContainer } from "./styles";
 import Terms from "./terms";
+import Nav from "../Home/Nav";
 import { Popover, message } from 'antd';
 
 const Register = () =>
@@ -177,6 +178,7 @@ const Register = () =>
 
     return (
         <RegisterContainer>
+            <Nav/>
             <div id="login_main">
                 <div id="login">
                     <div id="register_container">
