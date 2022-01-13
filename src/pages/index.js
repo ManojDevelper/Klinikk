@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Banner from "../components/Home/Banner"
 import Status from "../components/Home/Status"
 import Patner from "../components/Home/Patner"
