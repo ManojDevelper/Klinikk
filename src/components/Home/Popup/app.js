@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import qr1 from "../../../data/assets/patentqr.png"
 import playstorebtn from "../../../data/assets/playstore_btn.svg"
 import appstorebtn from "../../../data/assets/appstore_btn.svg"
-import { API_ROOT } from "gatsby-env-variables";
 import { AppSection } from "./styles";
 import { message } from 'antd';
 
@@ -15,7 +14,7 @@ const App = ( ) =>
     async function sendPat() {
         let item = { mobile_no }
 
-        let patResult = await fetch(API_ROOT + "/api/Spotcare/getPatientLink", {
+        let patResult = await fetch( "https://www.spotcare.in/api/Spotcare/getPatientLink", {
             method: "POST",
             body: JSON.stringify(item),
             headers: {

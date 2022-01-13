@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { API_ROOT } from "gatsby-env-variables";
 import { ContactContainer } from "./styles";
 import { message } from 'antd';
 import img6 from "../../../data/assets/contact.png";
@@ -11,7 +10,6 @@ const Contact = () =>
     const [ subject, setSubject ] = useState( "" )
     const [ email, setEmail ] = useState( "" )
     const [ query, setQuery ] = useState( "" )
-    const [ finalStatus, setFinalStatus ] = useState( "" )
     const [ errors, setErrors ] = useState( false );
     const validation = () =>
     {
@@ -43,7 +41,7 @@ const Contact = () =>
     {
         let item = { name, subject, email, query }
 
-        let result = await fetch( API_ROOT + "/api/contactUs", {
+        let result = await fetch( "https://www.spotcare.in/api/contactUs", {
             method: "POST",
             body: JSON.stringify( item ),
             headers: {
@@ -52,7 +50,6 @@ const Contact = () =>
             },
         } )
         result = await result.json()
-        setFinalStatus( result )
         if ( result.status === true )
         {
             success();

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import pic1 from "../../../data/assets/p4_i1.png";
 import pic2 from "../../../data/assets/p4_c1_i1.svg";
 import pic3 from "../../../data/assets/p4_c1_i2.svg";
@@ -21,8 +21,7 @@ import App from "../Popup/app";
 
 const Cards = () =>
 {
-    const [ open, setOpen ] = useState( false );
-
+    const [ open, setOpen ] = useState( );
 
     return (
         <CardsContainer>
