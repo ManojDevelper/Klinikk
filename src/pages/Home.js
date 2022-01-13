@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment } from "react";
 import Banner from "../components/Home/Banner"
 import Status from "../components/Home/Status"
 import Patner from "../components/Home/Patner"
@@ -12,52 +12,34 @@ import Clints from "../components/Home/Clints"
 import BlogPage from "./blog"
 import Footer from "../components/Home/Footer"
 import Contact from "../components/Home/Contact"
-// import Loader from "../components/Home/Loader"
 import { graphql } from "gatsby";
 
 import SEO from "../components/seo"
 
-const IndexPage = ( { data } ) =>
+const HomeIndex = ( { data } ) =>
 {
-  const [ loading, setLoading ] = useState( true );
 
-  useEffect( () =>
-  {
-    setLoading( true )
-    setTimeout( () =>
-    {
-      setLoading( false )
-    }, 5000 )
-  }, [] )
   return (
-  <Fragment>
-    {
-        loading ?
-          <Loader />
-          :
-          <>
-    <SEO title="Home" description="Gatsby is a React-based open source framework with performance, scalability and security built-in." keywords={ [ 'gatsby', 'react' ] } />
-    <Banner />
-    <Status />
-    <Patner />
-    <Cards />
-    <Coming />
-    <Doctor />
-    <About />
-    <Team />
-    <Customers />
-    <Clints />
-    <BlogPage data={ data } />
-    <Contact />
-    <Footer />
-    </>
-
-      }
-  </Fragment>
-)
+    <Fragment>
+      <SEO title="Home" description="Gatsby is a React-based open source framework with performance, scalability and security built-in." keywords={ [ 'gatsby', 'react' ] } />
+      <Banner />
+      <Status />
+      <Patner />
+      <Cards />
+      <Coming />
+      <Doctor />
+      <About />
+      <Team />
+      <Customers />
+      <Clints />
+      <BlogPage data={ data } />
+      <Contact />
+      <Footer />
+    </Fragment>
+  )
 }
 
-export default IndexPage
+export default HomeIndex;
 
 export const pageQuery = graphql`
   query {

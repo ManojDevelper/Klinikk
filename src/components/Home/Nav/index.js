@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavSection } from './styles.js'
 import { Link } from "gatsby";
-import logo from "../../../data/assets/nav-logo.svg";
 import fb from "../../../data/assets/navfb.svg";
 import insta from "../../../data/assets/navinsta.svg";
 import twitter from "../../../data/assets/navtwitter.svg";
@@ -64,7 +63,7 @@ const Nav = () =>
             <div id={ navbar ? 'nav_main_div' : 'nav_main_div2' }>
                 <div id="nav_container">
                     <div id="logo">
-                        <Link to="/" id="logo_link">
+                        <Link to="/Home" id="logo_link">
                             <div id="nav_logo">
                             <img src={ logo1 } alt="img" id="nav_logo1" />
                             <img src={ logo2 } alt="img" id="nav_logo2" />
@@ -73,11 +72,11 @@ const Nav = () =>
                         <img src={ ham1 } alt="img" id="ham_burger" onClick={ () => setHam( true ) } role="presentation"/>
                     </div>
                     <div id="nav_items">
-                        <Link to="/" id="navlinks">Home</Link>
-                        <Link to="/#about" id="navlinks">About</Link>
-                        <Link to="/#cards_container" id="navlinks">Products</Link>
-                        <Link to="/#finddoctors" id="navlinks">Find Doctor</Link>
-                        <Link to="/#contact" id="navlinks">Contact Us</Link>
+                        <Link to="/Home" id="navlinks">Home</Link>
+                        <Link to="/Home/#about" id="navlinks">About</Link>
+                        <Link to="/Home/#cards_container" id="navlinks">Products</Link>
+                        <Link to="/FindDoctors" id="navlinks">Find Doctor</Link>
+                        <Link to="/Contact" id="navlinks">Contact Us</Link>
                         <a href="https://www.spotcare.in/auth/login" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1">Register/Login</button></a>
                     </div>
                 </div>
@@ -86,11 +85,11 @@ const Nav = () =>
                 ham ?
                     <div id="nav_items_mob">
                         <img src={ close } alt="img" id="ham_burger" onClick={ () => setHam( false ) } role="presentation"/>
-                        <Link to="/" id="navlinks" onClick={ () => setHam( false ) }>Home</Link>
-                        <Link to="/#about" id="navlinks" onClick={ () => setHam( false ) }>About</Link>
-                        <Link to="/#cards_container" id="navlinks" onClick={ () => setHam( false ) }>Products</Link>
-                        <Link to="/#finddoctors" id="navlinks" onClick={ () => setHam( false ) }>Find Doctor</Link>
-                        <Link to="/#contact" id="navlinks" onClick={ () => setHam( false ) }>Contact Us</Link>
+                        <Link to="/Home" id="navlinks" onClick={ () => setHam( false ) }>Home</Link>
+                        <Link to="/Home/#about" id="navlinks" onClick={ () => setHam( false ) }>About</Link>
+                        <Link to="/Home/#cards_container" id="navlinks" onClick={ () => setHam( false ) }>Products</Link>
+                        <Link to="/FindDoctors" id="navlinks" onClick={ () => setHam( false ) }>Find Doctor</Link>
+                        <Link to="/Contact" id="navlinks" onClick={ () => setHam( false ) }>Contact Us</Link>
                         <a href="https://www.spotcare.in/auth/login" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1" onClick={ () => setHam( false ) }>Register/Login</button></a>
                         <div id="nav_icons">
                             <a href="https://www.facebook.com/NaturalMindsInd/" target="_blank" rel="noopener noreferrer"><img src={ fb } alt="img" /></a>
