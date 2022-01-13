@@ -49,7 +49,7 @@ const App = ( ) =>
                 <div id="qr_conatiner_block1">
                     <div id="ql_container_matter_container">
                         <div id="ql_container_matter">
-                            <h1>SpotCare® For Patients & General Public</h1>
+                            <h1>SpotCare™ For Patients & General Public</h1>
                             <p>Adding value to the lives of patients, doctors, health workers, pharmacies, diagnostics and healthcare institutions with the help of new-age technology</p>
                         </div>
                         <div id="qr_container_input_block" style={ { position: `relative` } }>
