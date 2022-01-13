@@ -2,9 +2,9 @@ import React from "react";
 import {Link} from "gatsby";
 import { BlogsContainer } from "../components/Home/Blog/styles";
 
-export const BlogPage = ( { data } ) => {
+export const BlogPage = ( { blogLists } ) => {
 
-    const blogList = data.blogData.edges
+    const blogList = blogLists
 
 
     return (

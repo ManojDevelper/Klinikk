@@ -19,42 +19,43 @@ import SEO from "../components/seo"
 
 const IndexPage = ( { data } ) =>
 {
-//   const [ loading, setLoading ] = useState( true );
+  //   const [ loading, setLoading ] = useState( true );
 
-//   useEffect( () =>
-//   {
-//     setLoading( true )
-//     setTimeout( () =>
-//     {
-//       setLoading( false )
-//     }, 5000 )
-//   }, [] )
+  //   useEffect( () =>
+  //   {
+  //     setLoading( true )
+  //     setTimeout( () =>
+  //     {
+  //       setLoading( false )
+  //     }, 5000 )
+  //   }, [] )
+  const blogLists = data.blogData.edges
   return (
-  <Fragment>
-    {/* {
+    <Fragment>
+      {/* {
         loading ?
           <Loader />
           :
           <> */}
-    <SEO title="Home" description="Gatsby is a React-based open source framework with performance, scalability and security built-in." keywords={ [ 'gatsby', 'react' ] } />
-    <Banner />
-    <Status />
-    <Patner />
-    <Cards />
-    <Coming />
-    <Doctor />
-    <About />
-    <Team />
-    <Customers />
-    <Clints />
-    <BlogPage data={ data } />
-    <Contact />
-    <Footer />
-    {/* </>
+      <SEO title="Home" description="Gatsby is a React-based open source framework with performance, scalability and security built-in." keywords={ [ 'gatsby', 'react' ] } />
+      <Banner />
+      <Status />
+      <Patner />
+      <Cards />
+      <Coming />
+      <Doctor />
+      <About />
+      <Team />
+      <Customers />
+      <Clints />
+      <BlogPage blogLists={ blogLists } />
+      <Contact />
+      <Footer />
+      {/* </>
 
       } */}
-  </Fragment>
-)
+    </Fragment>
+  )
 }
 
 export default IndexPage

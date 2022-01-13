@@ -18,6 +18,7 @@ import SEO from "../components/seo"
 
 const HomeIndex = ( { data } ) =>
 {
+  const blogLists = data.blogData.edges
 
   return (
     <Fragment>
@@ -32,7 +33,7 @@ const HomeIndex = ( { data } ) =>
       <Team />
       <Customers />
       <Clints />
-      <BlogPage data={ data } />
+      <BlogPage blogLists={ blogLists } />
       <Contact />
       <Footer />
     </Fragment>
