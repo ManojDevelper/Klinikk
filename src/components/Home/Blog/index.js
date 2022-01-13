@@ -5,11 +5,10 @@ import logo1 from "../../../images/logo.svg"
 import linkd from "../../../data/assets/linkedin.svg"
 import twitters from "../../../data/assets/twitter.svg"
 import
-  {
-    BlogContainer, AuthorInfo,
-    BlogContent,
-    TagsList
-  } from "./styles";
+{
+  BlogContainer, AuthorInfo,
+  BlogContent,
+} from "./styles";
 
 export const BlogPost = ( {
   fields,
@@ -19,59 +18,40 @@ export const BlogPost = ( {
   linkdin,
   twitter,
   html,
-  tags,
   preview
 } ) =>
 {
 
   return (
     <BlogContainer>
-              <h2 className="blogTitle">{ title }</h2>
+      <h2 className="blogTitle">{ title }</h2>
       <AuthorInfo>
-            <img src={logo1} alt={author} className="author_image"/>
-          <div className="author_info">
+        <img src={ logo1 } alt={ author } className="author_image" />
+        <div className="author_info">
           <h4>Klinik Everywhere</h4>
-            <div>
-              <span id="date">{date}</span>
-              {
-                fields && <span>{fields.readingTime.text} </span>
-              }
-            </div>
-            <div id="socio_lnks">
+          <div>
+            <span id="date">{ date }</span>
+            {
+              fields && <span>{ fields.readingTime.text } </span>
+            }
+          </div>
+          <div id="socio_lnks">
             {
               linkdin &&
-              <a id="link" href={linkdin} target="_blank"  without rel="noopener noreferrer"><img src={linkd} alt="img" className="icon"/></a>
+              <a id="link" href={ linkdin } target="_blank" without rel="noopener noreferrer"><img src={ linkd } alt="img" className="icon" /></a>
             }
             {
               twitter &&
-            <a id="link" href={twitter} target="_blank"  without rel="noopener noreferrer"><img src={twitters} alt="img" className="icon"/></a>
+              <a id="link" href={ twitter } target="_blank" without rel="noopener noreferrer"><img src={ twitters } alt="img" className="icon" /></a>
             }
-            </div>
           </div>
-        </AuthorInfo>
+        </div>
+      </AuthorInfo>
       <BlogContent>
         {
           preview ? <div>{ html }</div> : <div dangerouslySetInnerHTML={ { __html: html } } id="div_block" />
         }
       </BlogContent>
-      {
-        tags &&
-        <TagsList>
-          <img src={logo1} alt="img" style={{width: `20px`, margin: `0 15px 0 0`}}/>Tagged with
-          {
-            tags.map( ( type, i, arr ) =>
-            {
-              let divider = i < arr.length - 1 && <>, </>;
-              return (
-                  <span key={ type } style={{margin: `0 0 0 10px`}}>{ type }{ divider }</span>
-              )
-            } )
-          }
-          {/* {
-              content.frontmatter.tags.map(tag => <span>{tag}</span>)
-            } */}
-        </TagsList>
-      }
     </BlogContainer>
   );
 };
@@ -99,8 +79,8 @@ const Blog = ( { data } ) =>
         Link_next={ post.frontmatter.Link_next }
         date={ post.frontmatter.date }
         title={ post.frontmatter.title }
-        linkdin={post.frontmatter.linkdin}
-        twitter={post.frontmatter.twitter}
+        linkdin={ post.frontmatter.linkdin }
+        twitter={ post.frontmatter.twitter }
         html={ post.html }
         tags={ post.frontmatter.tags }
         preview={ false }
@@ -133,7 +113,6 @@ export const query = graphql`
         twitter
         date(formatString: "MMMM DD, YYYY")
         title
-        tags
         seo {
           title
           description

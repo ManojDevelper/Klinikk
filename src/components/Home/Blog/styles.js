@@ -273,17 +273,3 @@ export const BlogContent = styled.div`
     text-decoration: underline;
   }
 `;
-
-export const TagsList = styled.div`
-  display: flex; 
-  align-items: center;
-  margin-top: 50px;
-  font-size: 14px;
-  color: ${palette.PRIMARY_TXT_COLOR};
-  font-weight: 500;
-  padding: 48px 0px;
-  border-top: 1px solid #f0f0f2;
-  span:first-child {
-    margin-left: 5px;
-  }
-`;

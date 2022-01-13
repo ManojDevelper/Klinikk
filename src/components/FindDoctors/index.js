@@ -27,12 +27,6 @@ const FindDoctors = () =>
 
     const [ searchTerm, setSearchTerm ] = useState( "" )
     const [ final, setFinal ] = useState( "" )
-    
-    useEffect( () =>
-    {
-        search();
-        // eslint-disable-next-line
-    }, [] )
     const inputValue = event =>
     {
         const data = event.target.value
@@ -55,6 +49,11 @@ const FindDoctors = () =>
         result = await result.json()
         setFinal( result )
     }
+    useEffect( () =>
+    {
+        search();
+        // eslint-disable-next-line
+    }, [] )
 
     return (
         <DoctorContainer>

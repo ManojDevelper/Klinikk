@@ -3,8 +3,8 @@ excerpt: Equitable distribution of healthcare to the 121-crore population of Ind
 Link_preview: /blog/the-open-source-myopic-in-life-sciences/
 author_image: palani-director.png
 author: any One
-bio: The Art of Drug Design
-title: The Art of Drug Design
+bio: Assisting Equitable distribution of health
+title: Assisting Equitable distribution of health
 linkdin: https://in.linkedin.com/company/natural-minds-india
 twitter: https://twitter.com/naturalminds_in
 date: 2022-01-13T18:30:00.000Z
@@ -15,7 +15,7 @@ seo:
   description: APIs and excipients are important in achieving accurate molecular
     formulation.  However, the role of size, shape, coating and thickness is
     often neglected.
-  title: The Art of Drug Design
+  title: Assisting Equitable distribution of health
   keywords:
     - Klinik
 ---

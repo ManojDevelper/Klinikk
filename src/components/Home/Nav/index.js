@@ -77,7 +77,7 @@ const Nav = () =>
                         <Link to="/Home/#cards_container" id="navlinks">Products</Link>
                         <Link to="/FindDoctors" id="navlinks">Find Doctor</Link>
                         <Link to="/Contact" id="navlinks">Contact Us</Link>
-                        <a href="https://www.spotcare.in/auth/login" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1">Register/Login</button></a>
+                        <a href="/Register" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1">Register/Login</button></a>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@ const Nav = () =>
                         <Link to="/Home/#cards_container" id="navlinks" onClick={ () => setHam( false ) }>Products</Link>
                         <Link to="/FindDoctors" id="navlinks" onClick={ () => setHam( false ) }>Find Doctor</Link>
                         <Link to="/Contact" id="navlinks" onClick={ () => setHam( false ) }>Contact Us</Link>
-                        <a href="https://www.spotcare.in/auth/login" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1" onClick={ () => setHam( false ) }>Register/Login</button></a>
+                        <a href="/Register" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1" onClick={ () => setHam( false ) }>Register/Login</button></a>
                         <div id="nav_icons">
                             <a href="https://www.facebook.com/NaturalMindsInd/" target="_blank" rel="noopener noreferrer"><img src={ fb } alt="img" /></a>
                             <a href="https://www.instagram.com/naturalminds_in/?hl=en" target="_blank" rel="noopener noreferrer"><img src={ insta } alt="img" /></a>
