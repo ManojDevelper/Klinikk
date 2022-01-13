@@ -79,7 +79,7 @@ z-index: 5;
 }
 @keyframes example2 {
     0%   {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+    100% {transform: rotate(180deg);}
   }
 #nav_container #ham_burger {
     display: none;

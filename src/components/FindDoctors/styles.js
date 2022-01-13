@@ -25,12 +25,17 @@ export const DoctorContainer = styled.div`
   }
   #doctor_container {
     width: 100%;
+    position: relative;
     height: 23.625vw;
-    background: url("../data/assets/banner3.png");
     background-size: 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  doctor_container #background {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
   }
   #doctor_img_container {
     width: fit-content;
@@ -42,40 +47,32 @@ export const DoctorContainer = styled.div`
   #doctor_search {
     width: 43.0625vw;
     height: 3.5vw;
-    background: #ffffff;
-    border: 1px solid #088bff;
-    box-sizing: border-box;
-    border-radius: 3vw;
-    position: relative;
-  }
-  #doctor_search input {
+    background: white;
     position: absolute;
+    border-radius: 3vw;
+    display: flex;
+    padding: 0 0.5vw 0 1vw;
+    justify-content: space-between;
+}
+  #doctor_search input {
+    width: 100%;
     height: 100%;
     left: 4%;
-    width: 70%;
     border: none;
     outline: none;
     font-style: normal;
     font-weight: normal;
     font-size: 1vw;
     color: #000000;
+    background: transparent;
   }
   #doctor_img_container {
-    position: absolute;
     cursor: pointer;
     height: 100%;
     right: 0.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  #doctor_img_container div {
-    width: fit-content;
-    background: red;
-    height: 100%;
-  }
-  #doctor_img_container img {
-    margin: 0;
     width: 2.9vw;
   }
   /*===============footer_card_container============*/
@@ -273,13 +270,16 @@ export const DoctorContainer = styled.div`
     #doctors_cards_container {
       width: 100vw;
     }
-    #doctor_img_container img {
-      width: 10vw;
-    }
+    #doctor_img_container {
+      width: 10.5vw;
+      margin: 0 0 0 auto;
+  }
     #doctor_container {
       width: 100%;
       height: fit-content;
-      background: white;
+    }
+    #doctor_container #background {
+      display: none;
     }
     #doctor_search {
       width: 90%;

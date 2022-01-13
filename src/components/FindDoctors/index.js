@@ -12,6 +12,7 @@ import _ from "lodash";
 import { DoctorContainer } from "./styles.js";
 import { CloseOutlined } from '@ant-design/icons';
 import App from "../Home/Popup/app";
+import img from "../../data/assets/banner3.png";
 
 const FindDoctors = () =>
 {
@@ -60,6 +61,7 @@ const FindDoctors = () =>
             <div id="doctors">
                 <div id="doctor_container_main">
                     <div id="doctor_container">
+                        <img src={ img } alt="img" id="background" />
                         <div id="doctor_search">
                             <input
                                 type="search"
@@ -67,14 +69,13 @@ const FindDoctors = () =>
                                 onChange={ inputValue }
                                 onKeyPress={ handleEnter }
                             />
-                            <div id="doctor_img_container">
-                                <img
-                                    src={ icon }
-                                    alt="search"
-                                    onClick={ search }
-                                    role="presentation"
-                                />
-                            </div>
+                            <img
+                                src={ icon }
+                                alt="search"
+                                onClick={ search }
+                                role="presentation"
+                                id="doctor_img_container"
+                            />
                         </div>
                     </div>
                     <div id="doctors_cards_container">
