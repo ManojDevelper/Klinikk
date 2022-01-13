@@ -12,31 +12,31 @@ import Clints from "../components/Home/Clints"
 import BlogPage from "./blog"
 import Footer from "../components/Home/Footer"
 import Contact from "../components/Home/Contact"
-// import Loader from "../components/Home/Loader"
+import Loader from "../components/Home/Loader"
 import { graphql } from "gatsby";
 
 import SEO from "../components/seo"
 
 const IndexPage = ( { data } ) =>
 {
-  // const [ loading, setLoading ] = useState( true );
+  const [ loading, setLoading ] = useState( true );
 
-  // useEffect( () =>
-  // {
-  //   setLoading( true )
-  //   setTimeout( () =>
-  //   {
-  //     setLoading( false )
-  //   }, 5000 )
-  // }, [] )
+  useEffect( () =>
+  {
+    setLoading( true )
+    setTimeout( () =>
+    {
+      setLoading( false )
+    }, 5000 )
+  }, [] )
   const blogLists = data.blogData.edges
   return (
     <Fragment>
-      {/* {
+      {
         loading ?
           <Loader />
           :
-          <> */}
+          <>
             <SEO title="Home" description="Gatsby is a React-based open source framework with performance, scalability and security built-in." keywords={ [ 'gatsby', 'react' ] } />
             <Banner />
             <Status />
@@ -51,9 +51,9 @@ const IndexPage = ( { data } ) =>
             <BlogPage blogLists={ blogLists } />
             <Contact />
             <Footer />
-          {/* </>
+          </>
 
-      } */}
+      }
     </Fragment>
   )
 }
