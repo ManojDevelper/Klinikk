@@ -183,7 +183,7 @@ export const CardsContainer = styled.div`
 }
 @media (max-width: 750px) {
     #cards_container {
-        padding: 14.5vw 0 0 0;
+        padding: 17.4vw 0 0 0;
     }
      #cards_container h1 {
         font-size: 5.3vw;

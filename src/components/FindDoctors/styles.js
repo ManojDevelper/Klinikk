@@ -79,7 +79,7 @@ export const DoctorContainer = styled.div`
   #doctors_cards_container {
     width: calc(100% - 13.81%);
     margin: auto;
-    padding: 2.5vw 0 0 0;
+    padding: 3.5vw 0 0 0;
   }
   #doctors_footer_title {
     font-style: normal;

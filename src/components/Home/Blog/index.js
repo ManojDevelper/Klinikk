@@ -4,6 +4,8 @@ import SEO from "../../seo";
 import logo1 from "../../../images/logo.svg"
 import linkd from "../../../data/assets/linkedin.svg"
 import twitters from "../../../data/assets/twitter.svg"
+import Footer from "../Footer"
+import Contact from "../Contact"
 import
 {
   BlogContainer, AuthorInfo,
@@ -52,6 +54,8 @@ export const BlogPost = ( {
           preview ? <div>{ html }</div> : <div dangerouslySetInnerHTML={ { __html: html } } id="div_block" />
         }
       </BlogContent>
+      <Contact />
+      <Footer />
     </BlogContainer>
   );
 };

@@ -73,9 +73,9 @@ const Nav = () =>
                     </div>
                     <div id="nav_items">
                         <Link to="/Home" id="navlinks">Home</Link>
-                        <Link to="/Home/#about" id="navlinks">About</Link>
                         <Link to="/Home/#cards_container" id="navlinks">Products</Link>
                         <Link to="/FindDoctors" id="navlinks">Find Doctor</Link>
+                        <Link to="/Home/#about" id="navlinks">About</Link>
                         <Link to="/Contact" id="navlinks">Contact Us</Link>
                         <a href="/Register" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1">Register/Login</button></a>
                     </div>
@@ -86,9 +86,9 @@ const Nav = () =>
                     <div id="nav_items_mob">
                         <img src={ close } alt="img" id="ham_burger" onClick={ () => setHam( false ) } role="presentation"/>
                         <Link to="/Home" id="navlinks" onClick={ () => setHam( false ) }>Home</Link>
-                        <Link to="/Home/#about" id="navlinks" onClick={ () => setHam( false ) }>About</Link>
                         <Link to="/Home/#cards_container" id="navlinks" onClick={ () => setHam( false ) }>Products</Link>
                         <Link to="/FindDoctors" id="navlinks" onClick={ () => setHam( false ) }>Find Doctor</Link>
+                        <Link to="/Home/#about" id="navlinks" onClick={ () => setHam( false ) }>About</Link>
                         <Link to="/Contact" id="navlinks" onClick={ () => setHam( false ) }>Contact Us</Link>
                         <a href="/Register" target="_blank" rel="noopener noreferrer" id="reglink"><button id="navbtn1" onClick={ () => setHam( false ) }>Register/Login</button></a>
                         <div id="nav_icons">

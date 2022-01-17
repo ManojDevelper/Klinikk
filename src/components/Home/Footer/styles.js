@@ -34,6 +34,7 @@ export const FooterSection = styled.div`
     color: #ffffff;
     margin: 0;
     cursor: pointer;
+    line-height: 2.2vw;
 }
 .footer_b1_title #f_b_t2 {
     font-style: normal;

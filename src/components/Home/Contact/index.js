@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ContactContainer } from "./styles";
 import { message } from 'antd';
+import { ContactContainer } from "./styles";
 import img6 from "../../../data/assets/contact.png";
 
 const Contact = () =>
@@ -54,14 +54,14 @@ const Contact = () =>
         {
             success();
             clear();
-            setErrors(true)
+            setErrors( true )
         } else
         {
             error();
         }
         console.log( result.status )
     }
-    const signup2 = ()=>
+    const signup2 = () =>
     {
         setErrors( validation() )
         warning();

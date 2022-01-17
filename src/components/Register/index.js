@@ -3,7 +3,7 @@ import { navigate } from "gatsby";
 import { RegisterContainer } from "./styles";
 import Terms from "./terms";
 import Nav from "../Home/Nav";
-import { Popover, message } from 'antd';
+import { Popover, message, Checkbox } from 'antd';
 
 const Register = () =>
 {
@@ -113,10 +113,11 @@ const Register = () =>
         setShowData( result )
         if ( result.status === true )
         {
-              message.success("Registation Success")
+            message.success( "Registation Success" )
+            signUps()
         } else
         {
-              message.error(result.msg || result.message)
+            message.error( result.msg || result.message )
         }
     }
     function signUpp ()
@@ -125,9 +126,10 @@ const Register = () =>
         navigate( "/Register/" )
         warning()
     }
-    const warning = () => {
-        message.warning('Please fill all the fields');
-      };
+    const warning = () =>
+    {
+        message.warning( 'Please fill all the fields' );
+    };
     /*================to clear up all the results in the register form================*/
     const [ docResult, setDocResult ] = useState( "" )
     function signUps ()
@@ -146,7 +148,6 @@ const Register = () =>
         setState( "" )
         setPincode( "" )
         setRefferalcode( "" )
-        setShowData( "" )
         setShowData( "" )
     }
 
@@ -178,7 +179,7 @@ const Register = () =>
 
     return (
         <RegisterContainer>
-            <Nav/>
+            <Nav />
             <div id="login_main">
                 <div id="login">
                     <div id="register_container">
@@ -192,7 +193,7 @@ const Register = () =>
                             <div id="register_container_head_block2">
                                 <p>
                                     Already a member?
-                                    <a href="https://www.spotcare.in/auth/login" target="_blank" rel="noopener noreferrer"><span>
+                                    <a href="https://www.spotcare.in/auth/login" target="_blank" rel="noopener noreferrer"> <span>
                                         Log in
                                     </span></a>
                                 </p>
@@ -436,8 +437,8 @@ const Register = () =>
                             </div>
                         </div>
                         <div id="register_checkbox">
-                            <input type="checkbox" value={ showData.tnc_id } onChange={ e => setTnc( e.target.checked ) } />
-                            <p>By signing up, I accept NaturalMinds’s <span>  <Popover content={Terms}>Terms and conditions</Popover></span></p>
+                            <Checkbox onChange={ e => setTnc( e.target.checked ) } />
+                            <p>By signing up, I accept NaturalMinds’s<span><Popover content={ Terms }>Terms and conditions</Popover></span></p>
                         </div>
                         <div id="register_button">
                             { ( !name || !email || ( !/\S+@\S+\.\S+/.test( email ) ) || !gender || !selectedUserType || ( !phone || phone.length < 9 ) || !licenseNo || !orgName || ( !orgPhone || orgPhone.length < 9 ) || !address || !city || !state || !pincode || !tnc_id ) ? (

@@ -52,7 +52,7 @@ export const RegisterContainer = styled.div`
     height: fit-content;
 }
 #register_container_head_block1 h1 {
-    font-family: Noto Sans;
+    font-family: ${palette.CONTENT_FONT_FAMILY};
     font-style: normal;
     font-weight: bold;
     font-size: 2.25vw;
@@ -66,7 +66,6 @@ export const RegisterContainer = styled.div`
 }
 #register_container_head_block2 p {
     margin: 0;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 1vw;
@@ -75,7 +74,6 @@ export const RegisterContainer = styled.div`
     color: #333333;
 }
 #register_container_head_block2 span {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 1vw;
@@ -111,7 +109,6 @@ export const RegisterContainer = styled.div`
     border: 0.125vw solid rgba(255, 64, 129, 1);
 }
 #register_input_block_input1 h1 {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 0.75vw;
@@ -127,7 +124,6 @@ export const RegisterContainer = styled.div`
 #register_input_block_input1 input {
     height: 100%;
     width: 100%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 1vw;
@@ -156,7 +152,6 @@ export const RegisterContainer = styled.div`
     border: 1px solid gray;
 }
 #register_checkbox p {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 1vw;
@@ -182,7 +177,6 @@ export const RegisterContainer = styled.div`
     border-radius: 0.5vw;
     border: none;
     outline: none;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 1.125vw;
@@ -205,7 +199,6 @@ export const RegisterContainer = styled.div`
     height: 80%;
     margin: 0;
     background: white;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 1vw;
@@ -219,7 +212,6 @@ export const RegisterContainer = styled.div`
     display: block;
 }
 #register_inputs #option {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 1vw;
@@ -254,7 +246,6 @@ export const RegisterContainer = styled.div`
     border: 0.125vw solid rgba(255, 64, 129, 1);
 }
 #login #docselectorbox h1 {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 0.75vw;
@@ -300,7 +291,6 @@ export const RegisterContainer = styled.div`
     resize: none;
     border: none;
     color: black;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
 }
@@ -332,6 +322,7 @@ export const RegisterContainer = styled.div`
     }
     #register_container_head_block2 span {
         font-size: 3vw;
+        margin: 0 0 0 0.5vw;
     }
     #register_inputs {
         display: grid;

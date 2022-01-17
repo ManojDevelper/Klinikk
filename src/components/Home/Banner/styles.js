@@ -88,9 +88,9 @@ a {
 }
 #banner_section #matter h2 {
     width: 33.2vw;
-    font-style: normal;
+    font-style: italic;
     font-weight: normal;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     line-height: 2vw;
     color: #585858;
     margin: 0.4vw 0 0 0;
@@ -175,8 +175,8 @@ a {
 }
 #banner_section #matter h2 {
     width: 82vw;
-    font-size: 4.5vw;
-    line-height: 6.5vw;
+    font-size: 4vw;
+    line-height: 6vw;
     text-align: center;
     margin: 2.9vw auto auto auto;
 }

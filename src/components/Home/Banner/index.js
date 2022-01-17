@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { BannerSection } from "./styles.js";
 import icon from "../../../data/assets/play_icon.svg";
 import banner from "../../../data/assets/banner.png";

@@ -5,43 +5,49 @@ import appstorebtn from "../../../data/assets/appstore_btn.svg"
 import { AppSection } from "./styles";
 import { message } from 'antd';
 
-const App = ( ) =>
+const App = () =>
 {
 
     /*==================Api calling for patient form====================*/
-    const [mobile_no, setMobile_no] = useState("");   
+    const [ mobile_no, setMobile_no ] = useState( "" );
 
-    async function sendPat() {
+    async function sendPat ()
+    {
         let item = { mobile_no }
 
         let patResult = await fetch( "https://www.spotcare.in/api/Spotcare/getPatientLink", {
             method: "POST",
-            body: JSON.stringify(item),
+            body: JSON.stringify( item ),
             headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json",
             },
-        })
+        } )
 
         patResult = await patResult.json();
-        if (patResult.status === true) {
+        if ( patResult.status === true )
+        {
             success();
-            setMobile_no();
-        } else {
+            setMobile_no( "" );
+        } else
+        {
             error();
         }
     }
 
-    const success = () => {
-        message.success('Link Sent');
-      };
-      
-      const error = () => {
-        message.error('Please try again');
-      };
-      const warning = () => {
-        message.warning('Enter your mobile number');
-      };
+    const success = () =>
+    {
+        message.success( 'Link Sent' );
+    };
+
+    const error = () =>
+    {
+        message.error( 'Please try again' );
+    };
+    const warning = () =>
+    {
+        message.warning( 'Enter your mobile number' );
+    };
 
     return (
         <AppSection >
@@ -58,11 +64,11 @@ const App = ( ) =>
 
                                 <div id="qr_container_input_block_container_container">
                                     <p>+91</p>
-                                    <input type="text" placeholder="Enter Mobile Number" value={ mobile_no } onChange={ ( e ) => setMobile_no( e.target.value || "" ) } maxLength={ 10 } minLength={ 10 } onKeyPress={ event => { if ( !/[0-9]/.test( event.key ) ) { event.preventDefault() } } }/>
+                                    <input type="text" placeholder="Enter Mobile Number" value={ mobile_no } onChange={ ( e ) => setMobile_no( e.target.value || "" ) } maxLength={ 10 } minLength={ 10 } onKeyPress={ event => { if ( !/[0-9]/.test( event.key ) ) { event.preventDefault() } } } />
                                 </div>
                                 { ( !mobile_no || mobile_no.length < 10 ) ? (
-                                    <button onClick={warning} style={ { background: `gray` } }>Get App Link</button> ) : (
-                                    <button onClick={sendPat}>Get App Link</button>
+                                    <button onClick={ warning } style={ { background: `gray` } }>Get App Link</button> ) : (
+                                    <button onClick={ sendPat }>Get App Link</button>
                                 ) }
                             </div>
                         </div>

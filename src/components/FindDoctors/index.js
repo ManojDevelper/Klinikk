@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { navigate } from "gatsby";
 import playstorebtn from "../../data/assets/playstore.png";
 import appstorebtn from "../../data/assets/appstore.png";
 import icon1 from "../../data/assets/find_doc1.svg";
@@ -20,7 +21,7 @@ const FindDoctors = () =>
 
     function handleEnter ()
     {
-        search()
+        search();
     }
     /*================== patient form====================*/
     const [ toggle, setToggle ] = useState()
@@ -48,7 +49,8 @@ const FindDoctors = () =>
             }
         )
         result = await result.json()
-        setFinal( result )
+        setFinal( result );
+        navigate( "/FindDoctors/#doctors_cards_container" );
     }
     useEffect( () =>
     {

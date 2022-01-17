@@ -35,6 +35,10 @@ z-index: 5;
     color: #212E34;
     margin: 0 3.21vw 0 0;
     position: relative;
+    transition: 0.5s ease-in-out;
+}
+#nav_container #nav_items #navlinks:hover {
+    color: #0093c6;
 }
 #nav_container #nav_items .nav_active:before {
     content: "";
@@ -56,6 +60,11 @@ z-index: 5;
     color: #212E34;
     margin: 0 3.21vw 0 0;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+#nav_container #nav_items #navbtn1:hover {
+    border: 0.085vw solid #0093c6;
+    color: #0093c6;
 }
 #nav_container #logo {
     display: flex;
