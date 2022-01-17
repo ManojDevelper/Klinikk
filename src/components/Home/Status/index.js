@@ -5,7 +5,7 @@ const Status = () =>
 {
     const data = useStaticQuery( graphql`
     query {
-       status: file(relativePath: {eq: "status.md"}) {
+       status: file(relativePath: {eq: "Home/status.md"}) {
           id
           childMarkdownRemark {
             frontmatter {
