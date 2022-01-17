@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { navigate } from "gatsby";
 import playstorebtn from "../../data/assets/playstore.png";
 import appstorebtn from "../../data/assets/appstore.png";
@@ -18,11 +18,29 @@ import img from "../../data/assets/banner3.png";
 const FindDoctors = () =>
 {
     /*===================Enter Keypress event=======================*/
-
+    function useKey(key, cb) {
+        const callbackRef = useRef(cb);
+    
+        useEffect(() => {
+          callbackRef.current = cb;
+        })
+    
+        useEffect(() => {
+          function handle(event) {
+            if (event.code === key) {
+              callbackRef.current(event);
+            }
+          }
+          document.addEventListener("keypress", handle);
+          return () => document.removeEventListener("keypress")
+        }, [key]);
+      }
     function handleEnter ()
     {
         search();
+        navigate( "/FindDoctors/#doctors_cards_container" );
     }
+    useKey("Enter", handleEnter)
     /*================== patient form====================*/
     const [ toggle, setToggle ] = useState()
     /*=================================================================*/
@@ -50,7 +68,6 @@ const FindDoctors = () =>
         )
         result = await result.json()
         setFinal( result );
-        navigate( "/FindDoctors/#doctors_cards_container" );
     }
     useEffect( () =>
     {
@@ -69,7 +86,6 @@ const FindDoctors = () =>
                                 type="search"
                                 placeholder="Search by name, specialization, phone number"
                                 onChange={ inputValue }
-                                onKeyPress={ handleEnter }
                             />
                             <img
                                 src={ icon }
