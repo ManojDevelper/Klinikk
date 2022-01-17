@@ -25,38 +25,40 @@ export const BlogPost = ( {
 {
 
   return (
-    <BlogContainer>
-      <h2 className="blogTitle">{ title }</h2>
-      <AuthorInfo>
-        <img src={ logo1 } alt={ author } className="author_image" />
-        <div className="author_info">
-          <h4>Klinik Everywhere</h4>
-          <div>
-            <span id="date">{ date }</span>
-            {
-              fields && <span>{ fields.readingTime.text } </span>
-            }
+    <>
+      <BlogContainer>
+        <h2 className="blogTitle">{ title }</h2>
+        <AuthorInfo>
+          <img src={ logo1 } alt={ author } className="author_image" />
+          <div className="author_info">
+            <h4>Klinik Everywhere</h4>
+            <div>
+              <span id="date">{ date }</span>
+              {
+                fields && <span>{ fields.readingTime.text } </span>
+              }
+            </div>
+            <div id="socio_lnks">
+              {
+                linkdin &&
+                <a id="link" href={ linkdin } target="_blank" without rel="noopener noreferrer"><img src={ linkd } alt="img" className="icon" /></a>
+              }
+              {
+                twitter &&
+                <a id="link" href={ twitter } target="_blank" without rel="noopener noreferrer"><img src={ twitters } alt="img" className="icon" /></a>
+              }
+            </div>
           </div>
-          <div id="socio_lnks">
-            {
-              linkdin &&
-              <a id="link" href={ linkdin } target="_blank" without rel="noopener noreferrer"><img src={ linkd } alt="img" className="icon" /></a>
-            }
-            {
-              twitter &&
-              <a id="link" href={ twitter } target="_blank" without rel="noopener noreferrer"><img src={ twitters } alt="img" className="icon" /></a>
-            }
-          </div>
-        </div>
-      </AuthorInfo>
-      <BlogContent>
-        {
-          preview ? <div>{ html }</div> : <div dangerouslySetInnerHTML={ { __html: html } } id="div_block" />
-        }
-      </BlogContent>
+        </AuthorInfo>
+        <BlogContent>
+          {
+            preview ? <div>{ html }</div> : <div dangerouslySetInnerHTML={ { __html: html } } id="div_block" />
+          }
+        </BlogContent>
+      </BlogContainer>
       <Contact />
       <Footer />
-    </BlogContainer>
+    </>
   );
 };
 
